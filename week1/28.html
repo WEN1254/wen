@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        p{
+            width: 500px;
+            background-color: gray;
+            position: relative;
+            padding: 60px;
+        }
+        p::before{
+            content: '"';
+            color: white;
+           
+            position: absolute;
+            top: 0;
+            left: 0;
+            font-size: 100px;
+        }
+        p::after{
+            
+            
+            content: '"';
+            font-size: 100px;
+            color: white;
+           
+            position: absolute;
+            bottom: -10
+            ;
+            right: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam quasi, deserunt ducimus dignissimos porro magnam asperiores accusamus, iucimus dadipisicing elit. Quisquam quasi, deserunt ducimus dignissimos porro magnam asperiores accusamus, iucimus dignissimos porro magnam asperiores acadipisicing elit. Quisquam quasi, deserunt ducimus dignissimos porro magnam asperiores accusamus, iucimus dignissimos porro magnam asperiores acignissimos porro magnam asperiores accusamus, id in cum totam exercitationem earum illo illum pariatur maiores temporibus, ratione autemucimus dignissimos porro magnam asperiores accusamus, id in cum totam exercitationem earum illo illum pariatur maiores temporibus, ratione autem
+        d in cum totam exercitationem earum illo illum pariatur maiores temporibus, ratione autem.</p>
+</body>
+</html>

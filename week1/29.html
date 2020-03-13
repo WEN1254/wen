@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        .wrap{
+            margin: auto;
+            display: flex;
+
+        }
+        .item{
+            margin: 10px;
+            
+        }
+        h1{
+           position: relative;
+            background-color: gray;
+        }
+        h1::after{
+            content: '';
+            border-left: 3px solid red;
+            
+           
+            
+            display:block;
+            position: absolute;
+            bottom: 3px;
+            left: 0;
+            top:4px;
+            
+            
+            
+           
+
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="item">
+            <div class="pic">
+                <img src="https://loremflickr.com/320/240/dog" alt="">
+            </div>
+
+            <h1>標題
+
+            </h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, ipsum ipsam sed temporibus consequatur odit inventore aliquam fugiat similique repudiandae doloribus quod excepturi quae esse illum, quas, eaque nemo sit.</p>
+        </div>
+        <div class="item">
+            <div class="pic">
+                <img src="https://loremflickr.com/320/240/dog" alt="">
+            </div>
+
+            <h1>標題
+
+            </h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At, ipsum ipsam sed temporibus consequatur odit inventore aliquam fugiat similique repudiandae doloribus quod excepturi quae esse illum, quas, eaque nemo sit.</p>
+        </div>
+
+    </div>
+</body>
+</html>
