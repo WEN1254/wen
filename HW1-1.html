@@ -12,12 +12,11 @@
             list-style: none;
         }
 
-        /* .wrap {
-            width: 100%;
-        } */
+        
 
         .item1 {
             position: absolute;
+            
             height: 50px;
             width: 100%;
 
@@ -50,34 +49,48 @@
 
 
         }
+        .sticky{
+            position: absolute;
+            height: 4500px;
+            top: 50px;
+            /* background-color: aqua; */
+        }
 
         .item2 {
-            position:absolute;
-            top: 50px;
+            position:sticky;
+            top: 0px;
             z-index: 1;
             margin: auto;
-           
+
+
             /* position: sticky;
-            top:50px; */
+            top: 0;
+            left: 0; */
 
 
             height: 100px;
-            width: 100%;
+            width: 1960px;
+            display: flex;
+            margin: auto;
             background-color: white;
+            
+            
+            
+
 
         }
 
         .item2 h1 {
-            display: flex;
-            justify-content: flex-start;
-        }
+            padding-left: 50px;
+            
+            
+           }
 
         .item2_button {
-            position: absolute;
-            top: 10px;
-            right: 0;
-            display: flex;
-            justify-content: flex-end;
+            padding-left: 350px;
+            padding-top: 40px;
+            
+            
         }
 
         .item2_button a {
@@ -424,90 +437,91 @@
 
 <body>
     <!-- <div class="wrap"> -->
-        <div class="item1">
-            <a href="#" id="account">My account
+    <div class="item1">
+        <a href="#" id="account">My account
 
-            </a>
-            <div class="item1_button">
-                <a href="#">搜尋</a>
-                <a href="#">收藏</a>
-                <a href="#">購物車</a>
-                <a href="#">USD</a>
-            </div>
+        </a>
+        <div class="item1_button">
+            <a href="#">搜尋</a>
+            <a href="#">收藏</a>
+            <a href="#">購物車</a>
+            <a href="#">USD</a>
+        </div>
+
+    </div>
+    <div class="sticky"><div class="item2">
+        <h1>KARDONE <br>HEALTLY FOOD</h1>
+        <div class="item2_button">
+            <a href="#">HOME</a>
+            <a href="#">ABOUT US</a>
+            <a href="#">COLLECTIONS</a>
+            <a href="#">BLOG</a>
+            <a href="#">SALE</a>
+            <a href="#">CONTACT US</a>
+
+
+
 
         </div>
-        <div class="item2">
-            <h1>KARDONE <br>HEALTLY FOOD</h1>
-            <div class="item2_button">
-                <a href="#">HOME</a>
-                <a href="#">ABOUT US</a>
-                <a href="#">COLLECTIONS</a>
-                <a href="#">BLOG</a>
-                <a href="#">SALE</a>
-                <a href="#">CONTACT US</a>
-
-
-
-
-            </div>
+    </div></div>
+    
+    <div class="item3">
+        <img src="https://cdn.shopify.com/s/files/1/0303/0663/1739/files/slide_2_1063x722_crop_top.png?v=1580288232"
+            alt="">
+        <div class="txt">
+            <h1>Fresh and <br>Delicious</h1>
+            <p>ALL YEAR ROUND!</p>
+            <a href="#">READ MORE</a>
         </div>
-        <div class="item3">
-            <img src="https://cdn.shopify.com/s/files/1/0303/0663/1739/files/slide_2_1063x722_crop_top.png?v=1580288232"
+    </div>
+    <div class="item4">
+
+        <a href=""> <img
+                src="https://scontent.ftpe7-3.fna.fbcdn.net/v/t1.0-9/89511154_3006955912658853_267318648538923008_n.jpg?_nc_cat=108&_nc_sid=8024bb&_nc_ohc=SnGM-KfCYeIAX--naNn&_nc_ht=scontent.ftpe7-3.fna&oh=b53359142cb92bc2dcd4a9baf4962912&oe=5E94E572"
                 alt="">
-            <div class="txt">
-                <h1>Fresh and <br>Delicious</h1>
-                <p>ALL YEAR ROUND!</p>
-                <a href="#">READ MORE</a>
-            </div>
-        </div>
-        <div class="item4">
-
-            <a href=""> <img
-                    src="https://scontent.ftpe7-3.fna.fbcdn.net/v/t1.0-9/89511154_3006955912658853_267318648538923008_n.jpg?_nc_cat=108&_nc_sid=8024bb&_nc_ohc=SnGM-KfCYeIAX--naNn&_nc_ht=scontent.ftpe7-3.fna&oh=b53359142cb92bc2dcd4a9baf4962912&oe=5E94E572"
-                    alt="">
-                <p>Fresh Fruits</p>
+            <p>Fresh Fruits</p>
 
 
-            </a>
+        </a>
 
 
-            <a href=""><img
-                    src="https://scontent.ftpe7-3.fna.fbcdn.net/v/t1.0-9/89352825_3006955875992190_9122664081784832000_n.jpg?_nc_cat=102&_nc_sid=8024bb&_nc_ohc=LJ_5sZ3jGxIAX8pTz9S&_nc_ht=scontent.ftpe7-3.fna&oh=203a5ddf65708c9b3cf68d540db77cb1&oe=5E94DB7C"
-                    alt="">
-                <p>Veggies</p>
+        <a href=""><img
+                src="https://scontent.ftpe7-3.fna.fbcdn.net/v/t1.0-9/89352825_3006955875992190_9122664081784832000_n.jpg?_nc_cat=102&_nc_sid=8024bb&_nc_ohc=LJ_5sZ3jGxIAX8pTz9S&_nc_ht=scontent.ftpe7-3.fna&oh=203a5ddf65708c9b3cf68d540db77cb1&oe=5E94DB7C"
+                alt="">
+            <p>Veggies</p>
 
-            </a>
-
-
-            <a href=""><img
-                    src="https://scontent.ftpe7-2.fna.fbcdn.net/v/t1.0-9/89553449_3006955882658856_2341083851532533760_n.jpg?_nc_cat=111&_nc_sid=8024bb&_nc_ohc=Bgla5SMszF8AX_fpcsk&_nc_ht=scontent.ftpe7-2.fna&oh=fb9915fb64e45f196dda7e2ebc845c21&oe=5E966164"
-                    alt="">
-                <p>Fish</p>
-
-            </a>
-
-            <a href=""><img
-                    src="https://scontent.ftpe7-3.fna.fbcdn.net/v/t1.0-9/89493488_3006955952658849_6239999229482237952_n.jpg?_nc_cat=108&_nc_sid=8024bb&_nc_ohc=UReXx2OQcLwAX_hFNY1&_nc_ht=scontent.ftpe7-3.fna&oh=5976c48e6d565e083c065feaa8f33ac5&oe=5E93DDDB"
-                    alt="">
-                <p>Nuts & Seeds</p>
-
-            </a>
+        </a>
 
 
-            <a href=""><img
-                    src="https://scontent.ftpe7-2.fna.fbcdn.net/v/t1.0-9/89475331_3006955959325515_6299752687109931008_n.jpg?_nc_cat=109&_nc_sid=8024bb&_nc_ohc=MUMTQOfcs9QAX95mZDl&_nc_ht=scontent.ftpe7-2.fna&oh=b6f3fe11cfe09612c7d83dcb607cd8fb&oe=5E92E2DD"
-                    alt="">
-                <p>Bread</p>
+        <a href=""><img
+                src="https://scontent.ftpe7-2.fna.fbcdn.net/v/t1.0-9/89553449_3006955882658856_2341083851532533760_n.jpg?_nc_cat=111&_nc_sid=8024bb&_nc_ohc=Bgla5SMszF8AX_fpcsk&_nc_ht=scontent.ftpe7-2.fna&oh=fb9915fb64e45f196dda7e2ebc845c21&oe=5E966164"
+                alt="">
+            <p>Fish</p>
 
-            </a>
+        </a>
+
+        <a href=""><img
+                src="https://scontent.ftpe7-3.fna.fbcdn.net/v/t1.0-9/89493488_3006955952658849_6239999229482237952_n.jpg?_nc_cat=108&_nc_sid=8024bb&_nc_ohc=UReXx2OQcLwAX_hFNY1&_nc_ht=scontent.ftpe7-3.fna&oh=5976c48e6d565e083c065feaa8f33ac5&oe=5E93DDDB"
+                alt="">
+            <p>Nuts & Seeds</p>
+
+        </a>
 
 
-            <a href=""><img
-                    src="https://scontent.ftpe7-4.fna.fbcdn.net/v/t1.0-9/89840230_3006955992658845_2490931974839992320_n.jpg?_nc_cat=105&_nc_sid=8024bb&_nc_ohc=r-sIrxbmu48AX_Cb9OR&_nc_ht=scontent.ftpe7-4.fna&oh=57ab377adc15faabdb3bae6fc81d1b4e&oe=5E92E3AA"
-                    alt="">
-                <p>Dairy</p>
+        <a href=""><img
+                src="https://scontent.ftpe7-2.fna.fbcdn.net/v/t1.0-9/89475331_3006955959325515_6299752687109931008_n.jpg?_nc_cat=109&_nc_sid=8024bb&_nc_ohc=MUMTQOfcs9QAX95mZDl&_nc_ht=scontent.ftpe7-2.fna&oh=b6f3fe11cfe09612c7d83dcb607cd8fb&oe=5E92E2DD"
+                alt="">
+            <p>Bread</p>
 
-            </a>
+        </a>
+
+
+        <a href=""><img
+                src="https://scontent.ftpe7-4.fna.fbcdn.net/v/t1.0-9/89840230_3006955992658845_2490931974839992320_n.jpg?_nc_cat=105&_nc_sid=8024bb&_nc_ohc=r-sIrxbmu48AX_Cb9OR&_nc_ht=scontent.ftpe7-4.fna&oh=57ab377adc15faabdb3bae6fc81d1b4e&oe=5E92E3AA"
+                alt="">
+            <p>Dairy</p>
+
+        </a>
 
 
 
@@ -524,7 +538,7 @@
 
 
 
-        </div>
+    </div>
 
 
 
@@ -736,7 +750,7 @@
             <p>©Healtly Food . Powered by Shopify</p>
         </div>
 
-    <!-- </div> -->
+        <!-- </div> -->
 </body>
 
 </html>
