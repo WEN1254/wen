@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        /* 桌機 */
+        @media screen and (min-width: 768px) 
+        {
+            .head {
+                display: flex;
+                background-color: yellow;
+                color: white;
+            }
+
+            .head_pic {
+                position: relative;
+                width: 100%;
+                background-image: url('https://loremflickr.com/320/240/dog');
+                height: 400px;
+            }
+
+            /* .head_logo {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                display: flex;
+                left: 0;
+                top: 0;
+            }
+            .head_pic_a{
+                position:absolute;
+                right: 0;
+                top:0;
+            } */
+            /* .head_pic_txt{
+                width: 100%;
+                height: 100%;
+                display: flex;
+               flex-direction: column;
+                justify-content: center;
+                position: absolute;
+                text-align: center;
+                left: 0;
+                top:0;
+            } */
+            /* .head_pic_txt h1{
+                font-size: 100px;
+            }
+            .head_pic_txt p{
+                font-size: 50px;
+            }
+            .head_pic_txt a{
+                text-decoration: none;
+                color: white;
+                background-color: rgb(8, 207, 233);
+               
+                
+               
+                 */
+            }
+            .OUR_SERVICES_title{
+                /* position: relative; */
+                
+                background-color: violet;
+                width: 100%
+                ;
+                text-align: center;
+                
+
+            }
+            .OUR_SERVICES{
+                display: flex;
+                width: 100%;
+               
+               
+            }
+            .OUR_SERVICES img{
+                width: 15%;
+            }
+            
+            
+           
+
+
+
+        }
+
+        /* 手機 */
+        @media screen and (max-width: 1024px) {
+            .head {
+                display: flex;
+                background-color: red;
+                color: white;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head">
+        <div class="head_Address">
+            <p>
+                Address: 4578 Marmora Road, Glasgow, D04 89GR
+
+            </p>
+        </div>
+        <div class="head_Phones">
+            <p>
+                Phones: (800) 123-0045; (800) 123-0046
+
+            </p>
+        </div>
+        <div class="head_Community">
+            <img src="https://scontent.ftpe7-4.fna.fbcdn.net/v/t1.0-9/cp0/90280869_3017479594939818_5411388609452310528_n.jpg?_nc_cat=101&_nc_sid=8024bb&_nc_ohc=-scMNacaEjIAX979EFW&_nc_ht=scontent.ftpe7-4.fna&oh=39ae7fa582cd9f938c851938084e5da2&oe=5E971C1B"
+                alt="">
+            <img src="https://scontent.ftpe7-4.fna.fbcdn.net/v/t1.0-9/cp0/90280869_3017479594939818_5411388609452310528_n.jpg?_nc_cat=101&_nc_sid=8024bb&_nc_ohc=-scMNacaEjIAX979EFW&_nc_ht=scontent.ftpe7-4.fna&oh=39ae7fa582cd9f938c851938084e5da2&oe=5E971C1B"
+                alt="">
+            <img src="https://scontent.ftpe7-4.fna.fbcdn.net/v/t1.0-9/cp0/90280869_3017479594939818_5411388609452310528_n.jpg?_nc_cat=101&_nc_sid=8024bb&_nc_ohc=-scMNacaEjIAX979EFW&_nc_ht=scontent.ftpe7-4.fna&oh=39ae7fa582cd9f938c851938084e5da2&oe=5E971C1B"
+                alt="">
+            <img src="https://scontent.ftpe7-4.fna.fbcdn.net/v/t1.0-9/cp0/90280869_3017479594939818_5411388609452310528_n.jpg?_nc_cat=101&_nc_sid=8024bb&_nc_ohc=-scMNacaEjIAX979EFW&_nc_ht=scontent.ftpe7-4.fna&oh=39ae7fa582cd9f938c851938084e5da2&oe=5E971C1B"
+                alt="">
+            <img src="https://scontent.ftpe7-4.fna.fbcdn.net/v/t1.0-9/cp0/90280869_3017479594939818_5411388609452310528_n.jpg?_nc_cat=101&_nc_sid=8024bb&_nc_ohc=-scMNacaEjIAX979EFW&_nc_ht=scontent.ftpe7-4.fna&oh=39ae7fa582cd9f938c851938084e5da2&oe=5E971C1B"
+                alt="">
+            <img src="https://scontent.ftpe7-4.fna.fbcdn.net/v/t1.0-9/cp0/90280869_3017479594939818_5411388609452310528_n.jpg?_nc_cat=101&_nc_sid=8024bb&_nc_ohc=-scMNacaEjIAX979EFW&_nc_ht=scontent.ftpe7-4.fna&oh=39ae7fa582cd9f938c851938084e5da2&oe=5E971C1B"
+                alt="">
+
+
+
+        </div>
+
+    </div>
+    <div class="head_pic">
+        <!-- <img src="https://scontent.ftpe7-4.fna.fbcdn.net/v/t1.0-9/89975682_3015311071823337_4274711603166838784_o.jpg?_nc_cat=105&_nc_sid=8024bb&_nc_eui2=AeGAEk4KZIIzDnswxDMsQ9GcoaEkz2tRtVW9xIyLjEuAKwVSLHk-JyByZ7Gn1Fwq9iFfepgZ3MCyv2sT3wxnzx-x167Ceeh3shiihoFdhFpOyg&_nc_ohc=RLJsy2TgmGsAX_U3uWs&_nc_ht=scontent.ftpe7-4.fna&oh=ec5808fdadaaee774f751edaf88f541a&oe=5E978968"
+            alt=""> -->
+
+        <!-- <div class="head_logo">
+            <div class=""><img
+                    src="https://ld-wp73.template-help.com/wordpress/prod_21256/v1/wp-content/uploads/2018/12/logo.png"
+                    alt="">
+            </div> -->
+            <!-- <div class="head_pic_a">
+                <a href="">HOME</a>
+                <a href="">ABOUT</a>
+                <a href="">SERVICES</a>
+                <a href="">PROJECTS</a>
+                <a href="">BLOG</a>
+                <a href="">CONTACTS</a>
+
+            </div>
+            <div class="head_pic_txt">
+                <h1>CONSTRUCTION</h1>
+                <p>See how a 10-stories tower’s being built, in a time-lapse!</p>
+                <a href="">See Our Recent Projects</a>
+                 -->
+               
+
+            </div>
+            <div class="OUR_SERVICES_title">
+                <h1>OUR SERVICES</h1>
+
+            </div>
+            <div class="OUR_SERVICES">
+               
+
+            </div>
+            
+            
+
+        </div>
+
+
+
+    </div>
+
+
+
+</body>
+
+</html>

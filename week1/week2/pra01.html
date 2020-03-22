@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+
+
+        .head {
+            display: flex;
+            width: 100%;
+            background-color: black;
+            flex-wrap: wrap;
+            color: white;
+        }
+
+        .head_Address {
+            width: 100%;
+
+            text-align: center;
+        }
+
+
+        .head_Phones {
+            width: 100%;
+            text-align: center;
+        }
+
+        .item {
+            width: 10px;
+            height: 10px;
+            background-color: blue;
+            margin: 3px;
+
+
+        }
+
+        .head_Community {
+            display: flex;
+            text-align: center;
+            margin: auto;
+
+
+
+        }
+
+        .head_pic img {
+
+            height: 100%;
+        }
+
+        .head_pic {
+            /* position: relative; */
+        }
+
+        .head_logo {
+            /* background-color: yellow; */
+            margin-top: -800px;
+            margin-left: 120px;
+
+        }
+
+        .head_pic h1 {
+            color: white;
+            margin-top: 160px;
+            margin-left: 50px;
+            font-size: 50px;
+        }
+
+        .head_pic h2 {
+            color: white;
+            margin-top: 50px;
+            margin-left: 40px;
+            font-size: 30px;
+        }
+
+        .head_a {
+            text-align: center;
+
+        }
+
+        .head_a a {
+            color: white;
+            text-decoration: none;
+            margin: 5px;
+        }
+
+        .head_txt {
+            text-align: center;
+
+        }
+
+        .head_txt a {
+            color: white;
+            text-decoration: none;
+            background-color: rgb(15, 211, 236);
+
+            font-size: 50px;
+
+
+
+        }
+
+      
+
+        .OUR_SERVICES_title{
+            /* position:relative; */
+            bottom: -203px;
+            margin-top: 308px;
+            width: 100%;
+            text-align: center;
+            background-color: yellow;
+
+        }
+        .OUR_SERVICES{
+           text-align: center;
+           margin: auto;
+
+        }
+        /* 小*/
+        @media screen and (max-width: 768px) {
+            .head {
+                display: flex;
+                width: 100%;
+                background-color: black;
+                flex-wrap: wrap;
+                color: white;
+            }
+
+            .head_Address {
+                width: 100%;
+
+                text-align: center;
+            }
+
+
+            .head_Phones {
+                width: 100%;
+                text-align: center;
+            }
+
+            .item {
+                width: 10px;
+                height: 10px;
+                background-color: blue;
+                margin: 3px;
+
+
+            }
+
+            .head_Community {
+                display: flex;
+                text-align: center;
+                margin: auto;
+
+
+
+            }
+
+            .head_pic img {
+
+                height: 100%;
+            }
+
+            .head_pic {
+                /* position: relative; */
+            }
+
+            .head_logo {
+                /* background-color: yellow; */
+                margin-top: -800px;
+                margin-left: 120px;
+
+            }
+
+            .head_pic h1 {
+                color: white;
+                margin-top: 160px;
+                margin-left: 50px;
+                font-size: 50px;
+            }
+
+            .head_pic h2 {
+                color: white;
+                margin-top: 50px;
+                margin-left: 40px;
+                font-size: 30px;
+            }
+
+            .head_a {
+                text-align: center;
+
+            }
+
+            .head_a a {
+                color: white;
+                text-decoration: none;
+                margin: 5px;
+            }
+            .OUR_SERVICES_title{
+            /* position:relative; */
+            bottom: -203px;
+            margin-top: 308px;
+            width: 100%;
+            text-align: center;
+            background-color: red;
+
+        }
+        .OUR_SERVICES{
+           text-align: center;
+           margin: auto;
+
+        }
+            
+        }
+
+        /* 中 */
+        @media screen and (min-width: 768px) {
+            .head {
+                width: 100%;
+                justify-content: space-around;
+            }
+
+            .head_Address {
+                width: 33.33%;
+
+            }
+
+            .head_Phones {
+                width: 33.33%;
+
+            }
+
+            .head_Community {
+                width: 33.33%;
+                text-align: center;
+                margin: auto;
+
+            }
+
+            .head_pic {
+                position: relative;
+            }
+
+            /* .head_logo{
+                position: absolute;
+            } */
+            .head_a {
+                position: absolute;
+
+                /* position: relative; */
+                /* margin-left: 400px; */
+                /* background-color: blueviolet; */
+                margin-top: -50px;
+                right: 0;
+
+            }
+
+            .head_a a {
+
+
+
+                color: black;
+                z-index: 1;
+            }
+
+            .head_a h1 {
+                text-align: center;
+
+
+            }
+
+            .head_a h2 {}
+            
+        .OUR_SERVICES_title{
+            position: absolute;
+            bottom: -160px;
+            height: 50px;
+            width: 100%;
+            text-align: center;
+            background-color: blue;
+
+        }
+        .OUR_SERVICES{
+            position: relative;
+           text-align: center;
+           margin: auto;
+           bottom: -370px;
+           background-color: yellow;
+        }
+
+
+
+
+
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="head">
+
+        <div class="head_Address">
+            <p>Address: 4578 Marmora Road, Glasgow, D04 89GR</p>
+        </div>
+        <div class="head_Phones">
+            <p>Phones: (800) 123-0045; (800) 123-0046</p>
+
+
+        </div>
+        <div class="head_Community">
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+            <div class="item"></div>
+        </div>
+
+
+    </div>
+    <div class="head_pic">
+        
+
+
+        <img src="https://scontent.ftpe7-4.fna.fbcdn.net/v/t1.0-9/89975682_3015311071823337_4274711603166838784_o.jpg?_nc_cat=105&_nc_sid=8024bb&_nc_eui2=AeGAEk4KZIIzDnswxDMsQ9GcoaEkz2tRtVW9xIyLjEuAKwVSLHk-JyByZ7Gn1Fwq9iFfepgZ3MCyv2sT3wxnzx-x167Ceeh3shiihoFdhFpOyg&_nc_ohc=RLJsy2TgmGsAX_U3uWs&_nc_ht=scontent.ftpe7-4.fna&oh=ec5808fdadaaee774f751edaf88f541a&oe=5E978968"
+            alt="">
+        <div class="head_logo">
+            <img src="https://ld-wp73.template-help.com/wordpress/prod_21256/v1/wp-content/uploads/2018/12/logo.png"
+                alt="">
+               
+        </div>
+        <div class="head_a">
+            <a href="">HOME</a>
+            <a href="">ABOUT</a>
+            <a href="">SERVICES</a>
+            <a href="">PROJECTS</a>
+            <a href="">BLOG</a>
+            <a href="">CONTACTS</a>
+            
+        </div>
+        <div class="head_txt">
+            <h1>CONSTRUCTION</h1>
+            <h2>See how a 10-stories tower’s being built, in a time-lapse!</h2>
+            <a href="">See Our Recent Projects</a>
+            
+
+        </div>
+       
+        
+    </div>
+
+
+
+
+
+    <div class="OUR_SERVICES_title">
+        <h1>OUR SERVICES</h1>
+
+    </div>
+    <div class="OUR_SERVICES">
+        <div class="OUR_SERVICES_item">
+            <img src="https://scontent.ftpe7-4.fna.fbcdn.net/v/t1.0-9/89897772_3015835455104232_2441644652432982016_n.jpg?_nc_cat=105&_nc_sid=8024bb&_nc_eui2=AeFtpOyo76E5A5WRcVH5-5J-TYrX1U3epEckbLF-Ci1-IB5jTuQNJXhrKiNM1rs4a5uI3hk3jYpnAF_cAYf57sXwfEj2e70yIHlRWDuTcFosSg&_nc_ohc=AQN1mRpZtwcAX8NzGrY&_nc_ht=scontent.ftpe7-4.fna&oh=5b9c0a6ee04fe8c6a9dde7f547a6dd3d&oe=5E976F1F" alt="">
+            <h1>BUILDING INFORMATION MODELING</h1>
+            <p>
+                Oftentimes physical and functional essence of any construction project needs to be represented digitally, in a 3D model format. In...
+            </p>
+        </div>
+        <div class="OUR_SERVICES_item">
+            <img src="https://scontent.ftpe7-3.fna.fbcdn.net/v/t1.0-9/89959099_3015835448437566_1477767413259829248_n.jpg?_nc_cat=103&_nc_sid=8024bb&_nc_eui2=AeEuds3x8Sjc9k1nln5aaFVtALXlr9FJUVNcGb_ABULwX64IWAOfx1STWf8YJeVCbz0I0qPu76Z3EL0S4CtrD0vQNd4-IVFAmTLDWS44mV0PnA&_nc_ohc=dR2BzzDBuY0AX8ysips&_nc_ht=scontent.ftpe7-3.fna&oh=154133f32fb612c370f6b1cf794021ab&oe=5E97EE4E" alt="">
+            <h1>CONSTRUCTION SERVICES</h1>
+            <p>Our customers love the pace/quality tempo that we show during each of the principal construction processes! We're comfortable with any...</p>
+        </div>
+        <div class="OUR_SERVICES_item">
+            <img src="" alt="">
+            <h1></h1>
+            <p></p>
+        </div>
+        <div class="OUR_SERVICES_item">
+            <img src="" alt="">
+            <h1></h1>
+            <p></p>
+        </div>
+        <div class="OUR_SERVICES_item">
+            <img src="" alt="">
+            <h1></h1>
+            <p></p>
+        </div>
+        <div class="OUR_SERVICES_item">
+            <img src="" alt="">
+            <h1></h1>
+            <p></p>
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+</body>
+
+</html>

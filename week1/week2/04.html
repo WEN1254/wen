@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+        .wrap{
+            width: 100%;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .item{
+            height: 200px;
+            background-color: blue;
+            margin: 10px;
+        }
+        @media screen and (min-width:768px ){
+            .wrap{
+                display: flex;
+            }
+            .item{
+                background-color: yellow;
+                width: 30.7291%;
+                /* (768-60)/3=236 
+                236/768=0.30729166667
+                */
+                margin: 10px 1.30208333%;
+                /*
+                10/768=0.0130208333 
+                 */
+
+            }
+
+        }
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="item"></div>
+        <div class="item"></div>
+        <div class="item"></div>
+    </div>
+
+
+    
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="contain_row.css">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .head {
+            position: relative;
+            background-color: grey;
+        
+
+
+        }
+
+        .hbg {
+            position: absolute;
+            top: 0;
+            left: 150px;
+            /* background-color: gray; */
+            height: 50px;
+            width: 50px;
+
+        }
+
+        .hbg span:nth-child(2){
+            position: absolute;
+            top: 10px;
+            width: 30px;
+            height: 5px;
+            background-color: blue;
+        }
+        .hbg span:nth-child(1){
+            position: absolute;
+            top: 2px;
+            width: 30px;
+            height: 5px;
+            background-color: blue;
+        }
+        .hbg span:nth-child(3){
+            position: absolute;
+            top: 18px;
+            width: 30px;
+            height: 5px;
+            background-color: blue;
+        }
+        .head_end{
+            position: absolute;
+            top: 2px;
+            right: 300px;
+            
+        }
+       .shop_btn{
+           display: flex;
+       }
+       .shop_btn p{
+           margin-top: 10px;
+       }
+       @media screen and (max-width: 768px) {
+           .head{
+               position: relative;
+           }
+
+       }
+    </style>
+</head>
+
+<body>
+
+    <div class="head">
+        <div class="hbg ">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <div class="head_end ">
+            <div class="shop_btn">
+                <img src="https://scontent.frmq2-2.fna.fbcdn.net/v/t1.0-9/cp0/90212691_3022183891136055_6191878055120601088_n.jpg?_nc_cat=107&_nc_sid=8024bb&_nc_ohc=HRIyYp_hKjEAX8i1u-q&_nc_ht=scontent.frmq2-2.fna&oh=a96ad0b2034f245c44ee500cacd3a7ec&oe=5E9A59F2" alt="">
+                <div >
+                    <p>search store</p>
+                    
+
+                </div>
+                <img src="https://scontent.frmq2-2.fna.fbcdn.net/v/t1.0-9/cp0/90094420_3022188944468883_7209775395783049216_n.jpg?_nc_cat=100&_nc_sid=8024bb&_nc_ohc=1soYgSFQpXYAX9Bcj3-&_nc_ht=scontent.frmq2-2.fna&oh=06b3017f72db8e004b48f1b6a1cc3ade&oe=5E994A92" alt="">
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+          
+       
+
+
+
+
+
+
+
+
+
+        .wrap {
+            background-color: black;
+            width: 960px;
+            margin: auto;
+
+
+
+        }
+
+        .head {
+            background-color: black;
+            color: white;
+            display: flex;
+            width: 100%;
+            
+           
+        }
+
+        .head_Address {
+            display: flex;
+        }
+
+        .head_Phones {
+            display: flex;
+        }
+
+        .head_Community {
+            /* margin-left: 500px; */
+            margin: auto;
+            justify-content: flex-end;
+            
+        }
+
+        .head_pic img {
+           
+            width: 100%;
+            
+            
+        }
+        .head_pic{
+           position:relative;
+           /* width: 100%
+           ; */
+           
+        }
+        .logo{
+            /* display: flex;
+            margin: auto; */
+            /* background-color: cadetblue; */
+            /* position:absolute; */
+            /* width: 100%
+            ; */
+            
+            
+          
+        }
+        .logo img{
+            /* height: 10%; */
+            
+            /* position: absolute; */
+            
+            z-index: 2;
+             width: 100%
+             ;
+             height: 100%;
+             /* text-align: center;
+             margin: auto; */
+            
+           
+            
+        }
+        .logo p{
+            display: flex;
+            width: 250%
+            ;
+           
+           /* background-color: gray; */
+          
+            
+           
+           margin-top: 100px;
+
+        }
+        .head_pic h1{
+            
+           top:120px;
+            color:  rgb(218, 216, 216);
+            font-size: 50px;
+            text-align: center;
+            
+        
+        }
+        .head_pic h2{
+            /* position: absolute; */
+           top:200px;
+            color: rgb(218, 216, 216);
+            font-size: 50px;
+           
+
+        }
+        .head_button a{
+            color: white;
+            background-color: rgb(61, 209, 235);
+            /* position: absolute; */
+           top:380px;
+            text-decoration: none;
+            font-size: 50px;
+            
+            left: 50px;
+        }
+        
+        .logo a{
+            color: rgba(251, 254, 255, 0.993);
+            text-decoration: none;
+           
+           
+            text-align: center;
+            margin: auto;
+           
+
+            
+            
+            
+            
+        
+            
+            
+    
+            
+            
+        }
+        .OUR_SERVICES_title::before{
+            border-top: 1px solid rgb(0, 204, 255);
+            width: 100px;
+        }
+        .OUR_SERVICES_title{
+            /* margin: auto; */
+            text-align: center;
+           
+            /* border-top:1px solid rgb(0, 204, 255); */
+        }
+        .OUR_SERVICES{
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+        }
+        .OUR_SERVICES_pic{
+            width: 33.33%;
+            margin-top: 50px;
+            text-align: center;
+           
+            /* display: flex;
+            justify-content: space-around; */
+        }
+        .OUR_SERVICES_pic img{
+            width:18%;
+            height: 20%;
+            
+        }
+        .OUR_SERVICES_txt{
+            height: 300px;
+            padding: 30px;
+
+        }
+        .OUR_SERVICES_txt p{
+            margin-top: 30px;
+        }
+        .OUR_HISTORY{
+            display: flex;
+            width: 100%;
+            background-color: rgb(219, 216, 216);
+            
+        }
+        .OUR_HISTORY h1{
+            margin-top: 30px;
+        }
+        .OUR_HISTORY h2{
+            margin-top: 30px;
+        }
+        .OUR_HISTORY img{
+           width: 60%;
+            margin-top: 40px;
+            margin-left: 150px;
+        }
+        .OUR_HISTORY_txt{
+            width: 20%;
+            
+        }
+        .OUR_HISTORY_pic{
+            width: 80%;
+        }
+        .OUR_HISTORY p{
+            margin-top: 30px;
+        }
+        .OUR_SERVICES_btn{
+            margin-top: 20px;
+        }
+        .OUR_HISTORY a{
+            background-color: rgb(5, 221, 236);
+            color: white;
+            text-decoration: none;
+            /* font-size: 30px;
+            padding: 20px; */
+            /* position: absolute; */
+            bottom: 40px;
+           
+            
+           
+           
+           
+            
+        }
+        .Advantage{
+            width: 100%;
+            font-size: 0px;
+            display: flex;
+            flex-wrap: wrap;
+            
+        }
+        .Advantage_pic{
+           
+            width:25%;
+            display: flex;
+
+        }
+        .Advantage img{
+           height: 200px;
+            width:100%;
+            vertical-align: top;
+            
+        }
+        .Advantage_title{
+            position: absolute;
+            z-index: 2;
+            background-color: green;
+
+        } 
+        
+         .Advantage_pic p{
+            color: black;
+            position: absolute;
+            z-index: 1;
+        }
+        .RECENT_NEWS{
+            display: flex;
+            width: 100%;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .RECENT_NEWS img{
+            width: 100%;
+        }
+        .RECENT_NEWS_txt{
+            width: 30%;
+            margin: 10px;
+            
+        }
+        .RECENT_NEWS a{
+            background-color:rgb(34, 194, 243);
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            margin-top: 30px;
+
+        }
+        
+        .RECENT_NEWS_title{
+            display: flex;
+            margin-top: 40px;
+            justify-content: center;
+            
+        }
+        .RECENT_NEWS_txt h1{
+            margin-top: 10px;
+            font-size: 25px;
+        }
+        .RECENT_NEWS_txt p{
+            margin-top: 10px;
+        }
+        .foot{
+            display: flex;
+            justify-content: space-around;
+            margin-top: 50px;
+            background-color: grey;
+            color: white;
+            padding: 10px;
+            
+            flex-wrap: wrap;
+           
+           
+
+        }
+        .foot_txt{
+            width: 19%;
+            margin: 10px;
+            margin-top: 50px;
+        }
+        .foot_txt img{
+            width: 50%;
+        }
+        .foot_txt a{
+            text-decoration: none;
+            color: rgb(0, 211, 248);
+        }
+        .foot_nav{
+            display: flex;
+            background-color: rgb(68, 67, 67);
+            color: ivory;
+            width: 100%;
+            justify-content: right;
+          
+        }
+        .foot_txt_a p{
+            margin-top: 15px;
+            
+            
+            
+        }
+      
+       
+        
+        .foot_txt h3{
+            margin-top: 10px;
+        }
+        .foot_CONTACTS p{
+            margin-top: 40px;
+        }
+        .foot_Community{
+            width: 50%;
+            text-align: center;  
+            /* margin-top: -15px; */
+
+        }
+        
+        .end{
+            background-color: rgb(99, 98, 98);
+            width: 100%;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        /* 小於765 */
+        @media screen and (max-width: 765px) {
+            .head{
+                background-color: black;
+            }
+            .head_Address img{
+                height: 50%;
+
+            }
+            .head_Phones img{
+                height: 50%;
+
+            }
+            .OUR_SERVICES{
+                width: 100%;
+
+            }
+            .OUR_SERVICES_pic{
+                width: 100%;
+
+            }
+             .OUR_HISTORY{
+                 width: 100%;
+                 display: flex;
+                 flex-direction: column-reverse;
+
+                 
+             }
+             .OUR_HISTORY_pic{
+                 width: 100%;
+             }
+             .OUR_HISTORY img{
+                 width: 100%;
+             }
+             .OUR_HISTORY_txt{
+                 width: 100%;
+             }
+            .Advantage{
+                width: 100%;
+                vertical-align: top;
+            }
+            .Advantage_pic{
+                width: 100%;
+                display: flex; 
+                 flex-wrap: wrap;
+                 vertical-align: top;
+            }
+            .Advantage_pic img{
+                width: 100%;
+                height: 200px;
+                vertical-align: top;
+                
+            }
+            .RECENT_NEWS{
+                width: 100%;
+            }
+            .RECENT_NEWS_txt{
+                width: 100%;
+            }
+            .foot{
+                width: 100%;
+               
+            }
+            .foot_txt{
+                width: 100%;
+               
+            }
+            
+
+            
+        }
+        /* 大於940 */
+        @media screen and (max-width: 940px){
+            .foot{
+                width: 100%;
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .foot_txt{
+                width: 50%;
+            }
+            .head_Address img{
+                height: 70%;
+
+            }
+            .head_Phones img{
+                height: 70%;
+
+            }
+
+        }
+
+        
+
+    </style>
+</head>
+
+<body>
+
+    <div class="head">
+        <div class="head_Address">
+            <img src="https://scontent.ftpe7-4.fna.fbcdn.net/v/t1.0-9/cp0/89896991_3015320421822402_8773225499632599040_n.jpg?_nc_cat=107&_nc_sid=8024bb&_nc_eui2=AeH4LCeJM80F9-Z8cqT21yMEJK4Qo9XUmZid8FSo3J2k3Zb8cq7OTI2cis0dDM9HKqk8kPOKOMBraWndUjr6UGgSyYYeVFLfft25yKgJjsBpng&_nc_ohc=SJdFMlm79RQAX_ToAXZ&_nc_ht=scontent.ftpe7-4.fna&oh=488e1fc366a8556d8d392da5b2262583&oe=5E973845"
+                alt="">
+            <p>Address: 4578 Marmora Road, Glasgow, D04 89GR</p>
+        </div>
+        <div class="head_Phones">
+            <img src="https://scontent.ftpe7-2.fna.fbcdn.net/v/t1.0-9/cp0/90452561_3015320425155735_4497204378117079040_n.jpg?_nc_cat=104&_nc_sid=8024bb&_nc_eui2=AeGiLYlKVOuIHZJoI0FXlAHFlMjGt-NvD7YP-Xw8B43qmQHWrwve9v2SrOnd5LjgU7kckhUVY43XJl4sRpEnRoxccNIf4R1DhLXdrUr5D2n9Sw&_nc_ohc=Z64JwT75P3AAX-OPGbj&_nc_ht=scontent.ftpe7-2.fna&oh=cb703bc2d85cb6e07caf66d4fdbc4b8f&oe=5E96CDA7"
+                alt="">
+            <p>Phones: (800) 123-0045; (800) 123-0046</p>
+        </div>
+        <div class="head_Community">
+            <img src="https://scontent.ftpe7-2.fna.fbcdn.net/v/t1.0-9/cp0/90357393_3015341661820278_1876712992511361024_n.jpg?_nc_cat=104&_nc_sid=8024bb&_nc_eui2=AeEaJkclDKoTRdOzOm4B6ZHUlR9OzG-SHJG6gcqXQk50yvvSt7IVyHK2oFwPwROzlKcaZcTAgAxm8-r8u_Tic7QPu3kfo0KRWj9TjHZZYTtj2w&_nc_ohc=1-pL7CSAzzwAX9fbxJD&_nc_ht=scontent.ftpe7-2.fna&oh=8030e8664aaa82ba0865cd04360e82bc&oe=5E981E1F"
+                alt="">
+
+
+            <img src="https://scontent.ftpe7-4.fna.fbcdn.net/v/t1.0-9/cp0/90315217_3015341658486945_4643310700146458624_n.jpg?_nc_cat=105&_nc_sid=8024bb&_nc_eui2=AeGKduDS9FwlOsYP-ljrAcmHP_dRq2Fv-H7Y3-zCb45NubQbsN66m9gFB3AYbQAgmK6yYSclgLrATA3opWuo5DYDekXBIriMtyUnbB6Cz_GmCg&_nc_ohc=8rr3YDG-XZ8AX8Ws5TY&_nc_ht=scontent.ftpe7-4.fna&oh=02556b9edc4fe84f526a73fc460f09dc&oe=5E98B7E9"
+                alt="">
+
+
+            <img src="https://scontent.ftpe7-1.fna.fbcdn.net/v/t1.0-9/cp0/90359214_3015341655153612_4696537181873766400_n.jpg?_nc_cat=106&_nc_sid=8024bb&_nc_eui2=AeGwfaUEfzEt0mDIHWZGdzEVcEVvEqymY2gBxTnso1TtoqTSBeLVLie8gxscYOP766bhhsK1nsP6RN1JCew03EUvsr9CgtpjDRF3MKVeKvgxrg&_nc_ohc=SRi1CHOCrNEAX8ZyfPt&_nc_ht=scontent.ftpe7-1.fna&oh=25c9d59b1d6891b215f31073deac408f&oe=5E966BC6"
+                alt="">
+
+
+            <img src="https://scontent.ftpe7-3.fna.fbcdn.net/v/t1.0-9/cp0/90470385_3015341705153607_3896821035932057600_n.jpg?_nc_cat=102&_nc_sid=8024bb&_nc_eui2=AeG1-E86QRlqicaZMccANQpwiHSQvi1Rsdckbxa8jCa42yJZQyYR-_GCI1Rp3t9T51kf4T8G1mZLZwuZJ9F7OdP6z3HTSYhFG6Zu_LFGxAAuGA&_nc_ohc=JP3i5JF3wXAAX9mTUjR&_nc_ht=scontent.ftpe7-3.fna&oh=df27ae716b917d044d6e845637c49697&oe=5E975F91"
+                alt="">
+
+
+            <img src="https://scontent.ftpe7-3.fna.fbcdn.net/v/t1.0-9/cp0/89903542_3015341711820273_9031135257805455360_n.jpg?_nc_cat=111&_nc_sid=8024bb&_nc_eui2=AeEOMz0Ts0QnZQCMyVQaSYFmuaev1fQTM03_ulrN8q5s4SrZJb1INxg-lfKdWzi52sImsfJaQPCiySutmYWxJwp6vzp4_ZKx5j7MsfcFbduVMQ&_nc_ohc=AexT52j7GjkAX-6lX95&_nc_ht=scontent.ftpe7-3.fna&oh=535a2aa9a15052352b423329496c3342&oe=5E9875E7"
+                alt="">
+
+
+            <img src="https://scontent.ftpe7-3.fna.fbcdn.net/v/t1.0-9/cp0/90086464_3015341721820272_2708271613668753408_n.jpg?_nc_cat=108&_nc_sid=8024bb&_nc_eui2=AeFsTXd20vqJVBejCNSAPz53JV1J104T4Uql1wVz5vd0FSFp2R3AYcrSEy9u_UurcrnH8nrTEUWR3VU8UpzkBYxwCUa35o1LGCw4TtkmTu2a8A&_nc_ohc=EJtvulYvJLUAX_D2WGb&_nc_ht=scontent.ftpe7-3.fna&oh=a5a00b966e52d0325c9f4bebcd0e2a58&oe=5E96BB51"
+                alt="">
+
+        </div>
+    </div>
+    <div class="head_pic">
+        <!-- <div class="logo">
+            <img src="https://ld-wp73.template-help.com/wordpress/prod_21256/v1/wp-content/uploads/2018/12/logo.png"
+                alt="">
+            <p>
+                <a href="">HOME</a>
+                <a href="">ABOUT</a>
+                <a href="">SERVICES</a>
+                <a href="">PROJECTS</a>
+                <a href="">BLOG</a>
+                <a href="">CONTACTS</a></p>
+
+        </div>
+
+        <h1>CONSTRUCTION</h1>
+        <h2>See how a 10-stories tower’s being built, in a time-lapse!</h2>
+        <div class="head_button">
+            <a href="">See Our Recent Projects</a>
+        </div> -->
+
+        <img src="https://scontent.ftpe7-4.fna.fbcdn.net/v/t1.0-9/s960x960/89975682_3015311071823337_4274711603166838784_o.jpg?_nc_cat=105&_nc_sid=8024bb&_nc_eui2=AeGAEk4KZIIzDnswxDMsQ9GcoaEkz2tRtVW9xIyLjEuAKwVSLHk-JyByZ7Gn1Fwq9iFfepgZ3MCyv2sT3wxnzx-x167Ceeh3shiihoFdhFpOyg&_nc_ohc=RLJsy2TgmGsAX_U3uWs&_nc_ht=scontent.ftpe7-4.fna&_nc_tp=7&oh=22e28764f453d9c00fd93cf5c840f2aa&oe=5E959781"
+            alt="">
+
+
+
+    </div>
+    <div class="OUR_SERVICES_title">
+        <h1>OUR SERVICES</h1>
+    </div>
+
+
+    <div class="OUR_SERVICES">
+
+        <div class="OUR_SERVICES_pic">
+            <img src="https://scontent.ftpe7-4.fna.fbcdn.net/v/t1.0-9/89897772_3015835455104232_2441644652432982016_n.jpg?_nc_cat=105&_nc_sid=8024bb&_nc_eui2=AeFtpOyo76E5A5WRcVH5-5J-TYrX1U3epEckbLF-Ci1-IB5jTuQNJXhrKiNM1rs4a5uI3hk3jYpnAF_cAYf57sXwfEj2e70yIHlRWDuTcFosSg&_nc_ohc=AQN1mRpZtwcAX8NzGrY&_nc_ht=scontent.ftpe7-4.fna&oh=5b9c0a6ee04fe8c6a9dde7f547a6dd3d&oe=5E976F1F"
+                alt="">
+            <div class="OUR_SERVICES_txt">
+                <h2>BUILDING INFORMATION MODELING</h2>
+                <p>Oftentimes physical and functional essence of any construction project needs to be represented
+                    digitally, in a 3D model format. In...</p>
+            </div>
+
+
+        </div>
+        <div class="OUR_SERVICES_pic">
+            <img src="https://scontent.ftpe7-3.fna.fbcdn.net/v/t1.0-9/89959099_3015835448437566_1477767413259829248_n.jpg?_nc_cat=103&_nc_sid=8024bb&_nc_eui2=AeEuds3x8Sjc9k1nln5aaFVtALXlr9FJUVNcGb_ABULwX64IWAOfx1STWf8YJeVCbz0I0qPu76Z3EL0S4CtrD0vQNd4-IVFAmTLDWS44mV0PnA&_nc_ohc=dR2BzzDBuY0AX8ysips&_nc_ht=scontent.ftpe7-3.fna&oh=154133f32fb612c370f6b1cf794021ab&oe=5E97EE4E"
+                alt="">
+            <div class="OUR_SERVICES_txt">
+                <h2>CONSTRUCTION SERVICES</h2>
+                <p>Our customers love the pace/quality tempo that we show during each of the principal construction
+                    processes! We're comfortable with any...</p>
+            </div>
+
+        </div>
+        <div class="OUR_SERVICES_pic">
+            <img src="https://scontent.ftpe7-3.fna.fbcdn.net/v/t1.0-9/cp0/89942060_3015835451770899_3046551213655982080_n.jpg?_nc_cat=111&_nc_sid=8024bb&_nc_eui2=AeERaUnNakOlGN7K7R6otKY5TwCh6wzLKGJGzampYhVugCXEJHZ846qBWooJ4SIedEeaV4f_2ZXbNCPcphGUkJ_aP7POKWZihf-jS6qi-p1Gng&_nc_ohc=2iAA2MjNEYoAX8z32NG&_nc_ht=scontent.ftpe7-3.fna&oh=d47fd398a5f12b6002c5d4866df863b3&oe=5E982528"
+                alt="">
+            <div class="OUR_SERVICES_txt">
+                <h2>PRE-CONSTRUCTION SERVICES</h2>
+                <p>We take our time on initial planning before any construction begins, to balance all the financial and
+                    efficiency issues beforehand.This...</p>
+            </div>
+
+        </div>
+        <div class="OUR_SERVICES_pic">
+            <img src="https://scontent.ftpe7-1.fna.fbcdn.net/v/t1.0-9/84207185_3015835495104228_1604514187382358016_n.jpg?_nc_cat=106&_nc_sid=8024bb&_nc_eui2=AeGkhkfzNk3I-Ze0n9xssPl1NQYqMc3iSqfp7BpvicF2xezR54tQ3vzI0uyyeBmhANFTidsdE830WXrjEb5GFMBI0K_3DQQB1nHwwKqP7JMSZQ&_nc_ohc=bM-C7eSSkIIAX-swF2C&_nc_ht=scontent.ftpe7-1.fna&oh=95bc6ba757f0bd119d68882172a6b947&oe=5E98E052"
+                alt="">
+            <div class="OUR_SERVICES_txt">
+                <h2>DESIGN-BUILD</h2>
+                <p>If a project is not too complex, we may hire a designer-builder type of contractor, to make the
+                    longevity of...</p>
+            </div>
+
+        </div>
+        <div class="OUR_SERVICES_pic">
+            <img src="https://scontent.ftpe7-3.fna.fbcdn.net/v/t1.0-9/cp0/90510580_3015835505104227_6271420746363305984_n.jpg?_nc_cat=108&_nc_sid=8024bb&_nc_eui2=AeEPdFHGvsmQ6pRCLdHm8JlwNQvR59X-meIxWsTYXIo3QNAPkJW0B3XYs2QJNewIUlf7n0cVyGhIHj5Jifn96ib47ctzN4nSVgY9hHtWpelYtw&_nc_ohc=H__l6-iZHikAX9thnig&_nc_ht=scontent.ftpe7-3.fna&oh=c234a7c54753114e2fe7aff9d015faec&oe=5E975BB3"
+                alt="">
+            <div class="OUR_SERVICES_txt">
+                <h2>CONSTRUCTION MANAGEMENT</h2>
+                <p>Construction project management is essential. We're using the most time and iterations efficient life
+                    cycles for that.As you may know,...</p>
+            </div>
+
+        </div>
+        <div class="OUR_SERVICES_pic">
+            <img src="https://scontent.ftpe7-1.fna.fbcdn.net/v/t1.0-9/cp0/90461413_3015835508437560_2256554265172508672_n.jpg?_nc_cat=100&_nc_sid=8024bb&_nc_eui2=AeGpQQ447LgElYAiqCeiz54UpPNRGO3B9TPK0bMScjDK5P0Sj1RaaCZD9j59-FIDB5_UZ8zr8Fz1Us08FiR0ag7Nk7fsOJ39xdX6QB2ehEV4Jg&_nc_ohc=pzbTG5V-9JkAX8WJ13V&_nc_ht=scontent.ftpe7-1.fna&oh=80fac5a1bbe301353edaca35efc7f430&oe=5E981457"
+                alt="">
+            <div class="OUR_SERVICES_txt">
+                <h2>GENERAL CONTRACTING</h2>
+                <p>We have a long list of professional contractors, whom our engineers and architects enjoy to work with
+                    on a majority...</p>
+            </div>
+
+        </div>
+
+
+    </div>
+    <div class="OUR_HISTORY">
+        <div class="OUR_HISTORY_txt">
+            <h1>OUR HISTORY</h1>
+            <h2>OUR CONSTRUCTION COMPANY HAS BEEN FOUNDED 10 YEARS AGO, AT THE VERY PEAK OF THE BUILDING FRENZY IN THE
+                US…</h2>
+            <p>Since then we’ve built hundreds of commercial, government and private buildings and facilities. It may
+                not sound li of commercial, government and private buildings and facilities. It may not sound like
+                hours, materials, planning and correlating that were all involved in completing each separate project,
+                then our productivity is immense!
+            
+            <div class="OUR_SERVICES_btn"><a href="">READ MORE</a></div>
+
+        </div>
+        
+           
+            <div class="OUR_HISTORY_pic">
+                <img src="https://ld-wp73.template-help.com/wordpress/prod_21256/v1/wp-content/uploads/2018/12/index-2.png"
+                    data-src="https://ld-wp73.template-help.com/wordpress/prod_21256/v1/wp-content/uploads/2018/12/index-2.png"
+                    class="attachment-full size-full ls-is-cached lazyloaded" alt="img"
+                    data-srcset="https://ld-wp73.template-help.com/wordpress/prod_21256/v1/wp-content/uploads/2018/12/index-2.png 652w, https://ld-wp73.template-help.com/wordpress/prod_21256/v1/wp-content/uploads/2018/12/index-2-300x226.png 300w, https://ld-wp73.template-help.com/wordpress/prod_21256/v1/wp-content/uploads/2018/12/index-2-600x452.png 600w"
+                    data-sizes="(max-width: 652px) 100vw, 652px" sizes="(max-width: 652px) 100vw, 652px"
+                    srcset="https://ld-wp73.template-help.com/wordpress/prod_21256/v1/wp-content/uploads/2018/12/index-2.png 652w, https://ld-wp73.template-help.com/wordpress/prod_21256/v1/wp-content/uploads/2018/12/index-2-300x226.png 300w, https://ld-wp73.template-help.com/wordpress/prod_21256/v1/wp-content/uploads/2018/12/index-2-600x452.png 600w"
+                    alt="">
+             
+        </div>
+
+
+    </div>
+    <div class="Advantage">
+        <div class="Advantage_pic"><img
+                src="https://scontent.ftpe7-4.fna.fbcdn.net/v/t1.0-9/89697224_3015523628468748_8373761341734780928_o.jpg?_nc_cat=109&_nc_sid=8024bb&_nc_eui2=AeFPUZKGQNaSzSm5y_jzOw_ExDb3FLEgRdjStQOm9cSyqVD2-R7OQ6WC_MuJlaKEYJmHdUOEwrMVcMUPnT4tTYr4A-ClXjF_3QicXHm7dx3LCQ&_nc_ohc=qOgGE15MzEwAX9IJeeZ&_nc_ht=scontent.ftpe7-4.fna&oh=0f6abad910b8bcced96d87e8e7abd7da&oe=5E98B80A"
+                alt="">
+            <div class="Advantage_title">
+                <p>COMMERCIAL</p>
+            </div>
+
+
+        </div>
+
+        <div class="Advantage_pic"><img
+                src="https://scontent.ftpe7-3.fna.fbcdn.net/v/t1.0-9/s960x960/90426591_3015523621802082_4837746944832962560_o.jpg?_nc_cat=103&_nc_sid=8024bb&_nc_eui2=AeEIkt2fsmaiUUGDWoM9ckg1EcfgTjqVEOQwYPAupywW9YRvTqJfhyLhPU9ULcCH07C-C32LGEBEKG60Yax_JRmO_Bs9pM5K-HeScy45pFFBnA&_nc_ohc=ymV5_5wVsPMAX9vowHW&_nc_ht=scontent.ftpe7-3.fna&_nc_tp=7&oh=1d234dd6948d6a462e46b8c86103abfe&oe=5E96B4D5"
+                alt="">
+            <p>CULTURAL / LIFESTYLE</p>
+        </div>
+        <div class="Advantage_pic"><img
+                src="https://scontent.ftpe7-1.fna.fbcdn.net/v/t1.0-0/p640x640/90435635_3015523608468750_8067655964532146176_o.jpg?_nc_cat=100&_nc_sid=8024bb&_nc_eui2=AeG7oX5j95_ZL9n4c8tR9_vqIhWO5x-ATO-vLN9oLKECVosKkleeN7pdj3BGZn76d4cerwAp5X5m_0cDMUTdvK3p3vK8tVeH-17mcYE7JCABag&_nc_ohc=EnTPB2Dno3QAX_LWTr1&_nc_ht=scontent.ftpe7-1.fna&_nc_tp=6&oh=7e779fd9d65db49ae5249cdbf0a9b6b3&oe=5E97EC78"
+                alt="">
+            <p>DATA / TECHNOLOGY</p>
+        </div>
+        <div class="Advantage_pic"><img
+                src="https://scontent.ftpe7-3.fna.fbcdn.net/v/t1.0-0/p640x640/90057633_3015523701802074_9193472703628050432_o.jpg?_nc_cat=103&_nc_sid=8024bb&_nc_eui2=AeFXX27UEGY9RmrSA1UZn_gw5_pDA_6p54YZ-ATBQJEg9uTDONUeV1WH-SjHKo6addu_04TYv7udnqrpv6Ms-rReBMK2j6rHeRPTD6yQgnM5ig&_nc_ohc=w5O0Ewx0IfwAX-1K271&_nc_ht=scontent.ftpe7-3.fna&_nc_tp=6&oh=ab0347fde1c340e9f15aeb93d054b17b&oe=5E994918"
+                alt="">
+            <p>EDUCATIONAL</p>
+        </div>
+
+        <div class="Advantage_pic">
+            <img src="https://scontent.ftpe7-4.fna.fbcdn.net/v/t1.0-9/s960x960/89957156_3015523755135402_5938665406326636544_o.jpg?_nc_cat=109&_nc_sid=8024bb&_nc_eui2=AeG2UMOttkq7pq6NgRWFVGwRYJgLOQGPJESTZLNjHN7pVUZUYUutnBGLrIwt7rEQNb0Xdcuo4tt-iXqgbitjbt-6ZbVA1NHuYqKQyiK2tk0oEw&_nc_ohc=vI7vAxNjmVwAX_ZGeAF&_nc_ht=scontent.ftpe7-4.fna&_nc_tp=7&oh=8c81df59f60a8d57f33bb596541817e8&oe=5E963E1B"
+                alt="">
+            <p>GOVERNMENT / MILITARY</p>
+        </div>
+        <div class="Advantage_pic"><img
+                src="https://scontent.ftpe7-3.fna.fbcdn.net/v/t1.0-9/p720x720/90086456_3015523741802070_6652350806118891520_o.jpg?_nc_cat=103&_nc_sid=8024bb&_nc_eui2=AeGmHJVg-dJwZsDdppollilGm8LbQbWZp5Wq7cI4bc3fEO9FJb3UhANpGWHorxQoQYCDoYvKOLJSaxOsgCEksbDI1bg9lC_PNr039uNvDleYwg&_nc_ohc=ZcpZzBA7FQQAX9RVa2r&_nc_ht=scontent.ftpe7-3.fna&_nc_tp=6&oh=3f1d3c0dc5120f08d4f841116a487ea2&oe=5E96A9BA"
+                alt="">
+            <p>HEALTHCARE</p>
+        </div>
+        <div class="Advantage_pic"><img
+                src="https://scontent.ftpe7-4.fna.fbcdn.net/v/t1.0-9/p720x720/90021461_3015523825135395_2883692582141952000_o.jpg?_nc_cat=109&_nc_sid=8024bb&_nc_eui2=AeG8pRp1TsFRH3mAhiuCYMsXIaVtLOrv4Sh4P_rguias_yZHzCqxo_yN1g5qiZOgAWtIU-uQdElmlx733P2k8w_B56nvvakEKnZA9CCAquuH7w&_nc_ohc=KCYHKe4RFb8AX9M5UT2&_nc_ht=scontent.ftpe7-4.fna&_nc_tp=6&oh=e28424200d58f5a75de1792288c3f661&oe=5E9858BA"
+                alt="">
+            <p>MANUFACTURING / INDUSTRIAL</p>
+        </div>
+
+        <div class="Advantage_pic"><img
+                src="https://scontent.ftpe7-4.fna.fbcdn.net/v/t1.0-0/p640x640/90505709_3015523861802058_9000144057992740864_o.jpg?_nc_cat=105&_nc_sid=8024bb&_nc_eui2=AeEaFXJVX3rBKHz3E5E6FURp3-raPavyuDbLNYHPUkIc9DV9atA_i2y6f7dCOMjqKMt0CQA52MR2VHlBUHvmok715av0c7YOIzEwgE87bQ3FCg&_nc_ohc=qlo61U1SfuIAX8Tx_si&_nc_ht=scontent.ftpe7-4.fna&_nc_tp=6&oh=486c68d1ea0fa650b37c315cbbf722d2&oe=5E9851D5"
+                alt="">
+            <p>WAREHOUSE / LOGISTICS</p>
+
+        </div>
+
+
+
+    </div>
+    <div class="RECENT_NEWS_title">
+        <h1>RECENT NEWS</h1>
+    </div>
+
+
+    <div class="RECENT_NEWS">
+
+
+
+        <div class="RECENT_NEWS_txt">
+            <img src="https://ld-wp73.template-help.com/wordpress/prod_21256/v1/wp-content/uploads/2018/12/blog-27.jpg"
+                data-src="https://ld-wp73.template-help.com/wordpress/prod_21256/v1/wp-content/uploads/2018/12/blog-27.jpg"
+                alt="Future proofing hospitals" alt="">
+            <h1>FUTURE PROOFING HOSPITALS</h1>
+            <p>Posted by adminDecember 7, 2018<br>
+                By improving the physical layout of hospitals and medical facilities, we can enhance and increase safety
+                mechanisms, improve care, and…</p>
+        </div>
+
+        <div class="RECENT_NEWS_txt">
+            <img src="https://ld-wp73.template-help.com/wordpress/prod_21256/v1/wp-content/uploads/2018/12/blog-26.jpg"
+                data-src="https://ld-wp73.template-help.com/wordpress/prod_21256/v1/wp-content/uploads/2018/12/blog-26.jpg"
+                alt="">
+            <h1>BIKE PARTS WAREHOUSE, DE</h1>
+            <p>Posted by adminDecember 7, 2018<br>
+                Delaware proved to be a very friendly place to work at… While invited there for completing a mid-sized
+                warehouse for…</p>
+        </div>
+
+        <div class="RECENT_NEWS_txt">
+            <img src="https://ld-wp73.template-help.com/wordpress/prod_21256/v1/wp-content/uploads/2018/12/blog-28.jpg"
+                alt="">
+            <h1>JOY HOTEL & CASINO</h1>
+            <p>Posted by adminDecember 7, 2018 <br>
+                This hotel & casino complex is our most recent completed building… The whole structure that took us 6
+                months to…</p>
+        </div>
+        <a href="">SEE ALL NEWS</a>
+
+
+    </div>
+    <div class="foot">
+        <div class="foot_txt">
+            <img src="https://ld-wp73.template-help.com/wordpress/prod_21256/v1/wp-content/uploads/2018/12/footer-retina-logo.png"
+                alt="">
+            <p>Construction’s core values have been shaped over more than 10 years of delivering the finest construction
+                services to our clients. They stood to the test of time and these principles remain our bedrock
+                lynchpins. We never tried to cut on either quality, the pace of work or any other construction aspect.
+                We stay true to our full promise of efficiency!</p>
+        </div>
+        <div class="foot_txt_a">
+            <div class="foot_txt">
+                <h2>NAVIGATION</h2>
+                <p><a href="">Home</a>
+                    <a href="">About</a>
+                    <a href="">Services</a>
+                    <a href="">Projects</a>
+                    <a href="">Blog</a>
+                    <a href="">Contacts</a></p>
+            </div>
+
+
+        </div>
+        
+            <div class="foot_txt">
+
+                <h2>RECENT COMMENTS</h2>
+                <h3>The art and science of color planning for performance requirements</h3>
+                <p>Posted by admin</p>
+                <h3>Future proofing hospitals</h3>
+                <p>Posted by admin</p>
+            </div>
+            <div class="foot_txt">
+                <div class="foot_CONTACTS">
+                    <h2>CONTACTS</h2>
+                    <p>Address: 4578 Marmora Road, Glasgow, D04 89GR</p>
+                    <br>
+                    <p>Phones: (800) 123-0045;
+                        (800) 123-0046</p><br>
+                    <p>Email: info@demolink.org</p>
+    
+                </div>
+
+       
+        
+
+        </div>
+
+    </div>
+    <div class="end">
+        <p>Manufax Theme © 2019. | Theme design by Zemez</p>
+        <div class="foot_Community">
+            <img src="https://scontent.ftpe7-2.fna.fbcdn.net/v/t1.0-9/cp0/90357393_3015341661820278_1876712992511361024_n.jpg?_nc_cat=104&_nc_sid=8024bb&_nc_eui2=AeEaJkclDKoTRdOzOm4B6ZHUlR9OzG-SHJG6gcqXQk50yvvSt7IVyHK2oFwPwROzlKcaZcTAgAxm8-r8u_Tic7QPu3kfo0KRWj9TjHZZYTtj2w&_nc_ohc=1-pL7CSAzzwAX9fbxJD&_nc_ht=scontent.ftpe7-2.fna&oh=8030e8664aaa82ba0865cd04360e82bc&oe=5E981E1F"
+                alt="">
+
+
+            <img src="https://scontent.ftpe7-4.fna.fbcdn.net/v/t1.0-9/cp0/90315217_3015341658486945_4643310700146458624_n.jpg?_nc_cat=105&_nc_sid=8024bb&_nc_eui2=AeGKduDS9FwlOsYP-ljrAcmHP_dRq2Fv-H7Y3-zCb45NubQbsN66m9gFB3AYbQAgmK6yYSclgLrATA3opWuo5DYDekXBIriMtyUnbB6Cz_GmCg&_nc_ohc=8rr3YDG-XZ8AX8Ws5TY&_nc_ht=scontent.ftpe7-4.fna&oh=02556b9edc4fe84f526a73fc460f09dc&oe=5E98B7E9"
+                alt="">
+
+
+            <img src="https://scontent.ftpe7-1.fna.fbcdn.net/v/t1.0-9/cp0/90359214_3015341655153612_4696537181873766400_n.jpg?_nc_cat=106&_nc_sid=8024bb&_nc_eui2=AeGwfaUEfzEt0mDIHWZGdzEVcEVvEqymY2gBxTnso1TtoqTSBeLVLie8gxscYOP766bhhsK1nsP6RN1JCew03EUvsr9CgtpjDRF3MKVeKvgxrg&_nc_ohc=SRi1CHOCrNEAX8ZyfPt&_nc_ht=scontent.ftpe7-1.fna&oh=25c9d59b1d6891b215f31073deac408f&oe=5E966BC6"
+                alt="">
+
+
+            <img src="https://scontent.ftpe7-3.fna.fbcdn.net/v/t1.0-9/cp0/90470385_3015341705153607_3896821035932057600_n.jpg?_nc_cat=102&_nc_sid=8024bb&_nc_eui2=AeG1-E86QRlqicaZMccANQpwiHSQvi1Rsdckbxa8jCa42yJZQyYR-_GCI1Rp3t9T51kf4T8G1mZLZwuZJ9F7OdP6z3HTSYhFG6Zu_LFGxAAuGA&_nc_ohc=JP3i5JF3wXAAX9mTUjR&_nc_ht=scontent.ftpe7-3.fna&oh=df27ae716b917d044d6e845637c49697&oe=5E975F91"
+                alt="">
+
+
+            <img src="https://scontent.ftpe7-3.fna.fbcdn.net/v/t1.0-9/cp0/89903542_3015341711820273_9031135257805455360_n.jpg?_nc_cat=111&_nc_sid=8024bb&_nc_eui2=AeEOMz0Ts0QnZQCMyVQaSYFmuaev1fQTM03_ulrN8q5s4SrZJb1INxg-lfKdWzi52sImsfJaQPCiySutmYWxJwp6vzp4_ZKx5j7MsfcFbduVMQ&_nc_ohc=AexT52j7GjkAX-6lX95&_nc_ht=scontent.ftpe7-3.fna&oh=535a2aa9a15052352b423329496c3342&oe=5E9875E7"
+                alt="">
+
+
+            <img src="https://scontent.ftpe7-3.fna.fbcdn.net/v/t1.0-9/cp0/90086464_3015341721820272_2708271613668753408_n.jpg?_nc_cat=108&_nc_sid=8024bb&_nc_eui2=AeFsTXd20vqJVBejCNSAPz53JV1J104T4Uql1wVz5vd0FSFp2R3AYcrSEy9u_UurcrnH8nrTEUWR3VU8UpzkBYxwCUa35o1LGCw4TtkmTu2a8A&_nc_ohc=EJtvulYvJLUAX_D2WGb&_nc_ht=scontent.ftpe7-3.fna&oh=a5a00b966e52d0325c9f4bebcd0e2a58&oe=5E96BB51"
+                alt="">
+
+        </div>
+
+</body>
+
+</html>
