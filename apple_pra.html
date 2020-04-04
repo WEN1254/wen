@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+   
+</style>
+
+<body>
+
+   
+                <div id="photo"><img
+                        src="https://bs2020-01.azurewebsites.net/Fake-Apple/img/iphone11-select-2019-family.png" alt="">
+                </div>
+               <div>
+                <input type="button" value="黃色" onclick="Yellow()">
+                <input type="button" value="紅色" onclick="Red()">
+                <input type="button" value="黑色" onclick="Black()">
+
+                <input type="button" value="白色" onclick=" White()">
+                <input type="button" value="綠色" onclick="Green()">
+                <input type="button" value="紫色" onclick="Purple()">
+
+               
+
+               </div>
+
+              <div>
+                <input type="button" value="64G" onclick="run()">
+              </div>
+
+           
+   
+                
+
+
+
+
+
+                <div id="money">
+                    <h1>$0</h1>
+                    
+                </div>
+
+           
+
+
+
+
+
+
+    <script>
+
+        cache_y = ""
+        function Yellow() {
+
+            cache_y = "<img src='https://bs2020-01.azurewebsites.net/Fake-Apple/img/iphone-yellow.png'>";
+            document.getElementById("photo").innerHTML = cache_y;
+        }
+        cache_r = ""
+        function Red() {
+
+            cache_r = "<img src='https://bs2020-01.azurewebsites.net/Fake-Apple/img/iphone-red.png'>";
+            document.getElementById("photo").innerHTML = cache_r;
+        }
+        cache_b = ""
+        function Black() {
+
+            cache_b = "<img src='https://hsulei.azurewebsites.net/Apple/apple-pic/iphone11-black-select-2019.png'>";
+            document.getElementById("photo").innerHTML = cache_b;
+        }
+        cache_w = ""
+        function White() {
+
+            cache_w = "<img src='https://hsulei.azurewebsites.net/Apple/apple-pic/iphone11-white-select-2019.png'>";
+            document.getElementById("photo").innerHTML = cache_w;
+        }
+        cache_g = ""
+        function Green() {
+
+            cache_g = "<img src='https://hsulei.azurewebsites.net/Apple/apple-pic/iphone11-green-select-2019.png'>";
+            document.getElementById("photo").innerHTML = cache_g;
+        }
+        cache_p = ""
+        function Purple() {
+
+            cache_p = "<img src='https://hsulei.azurewebsites.net/Apple/apple-pic/iphone11-purple-select-2019.png'>";
+            document.getElementById("photo").innerHTML = cache_p;
+        }
+        
+    //     function run() {
+    // var c = document.getElementById("money");
+    // var n = document.createElement("h1");
+    // var message = "$24900";
+    // n.appendChild(document.createTextNode(message));
+    // c.appendChild(n);
+    // }
+    function run() {
+    var h1= document.getElementsByTagName("h1")[0];
+    h1.innerHTML = "$24900";
+    }
+
+        
+
+    </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
