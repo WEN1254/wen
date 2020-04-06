@@ -18,36 +18,64 @@
         margin: 0;
         list-style: none;
     }
+    .buttons{
+        border: 1px solid black;
+        background-color: white;
+    }
+    .head{
+        width: 100%;
+        text-align: center;
+    }
    
 </style>
 
 <body>
+     <div class="head ">
+     <div class="row">
+         <div class="col-12">
+             <button >iphone</button>
+             <a href="https://wervfc.azurewebsites.net/Apple.html"><button>ipad</button></a>
+             
+             <button>imac</button>
+         </div>
+         <div class="col-12">
+            <div id="photo"><img
+                src="https://bs2020-01.azurewebsites.net/Fake-Apple/img/iphone11-select-2019-family.png" alt="">
+        </div>
+        <div class="col-12">
+            <input type="button" value="黃色" class="buttons" onclick="Yellow()">
+            <input type="button" value="紅色" class="buttons" onclick="Red()">
+            <input type="button" value="黑色" class="buttons" onclick="Black()">
+
+            <input type="button" value="白色" class="buttons" onclick=" White()">
+            <input type="button" value="綠色" class="buttons" onclick="Green()">
+            <input type="button" value="紫色" class="buttons" onclick="Purple()">
+
+        </div>
+        <div class="col-12">
+            <input type="button" value="64G" class="buttons" onclick="iphone11_64()">
+            <input type="button" value="128G" class="buttons" onclick="iphone11_128()">
+            <input type="button" value="256G" class="buttons" onclick="iphone11_256()">
+
+        </div>
+        <div class="col-12">
+            <div id="money">
+                <h1>$0</h1>
+                
+            </div>
+
+
+        </div>
+       
+
+         </div>
+         
+     </div>
+     </div>
 
    
-                <div id="photo"><img
-                        src="https://bs2020-01.azurewebsites.net/Fake-Apple/img/iphone11-select-2019-family.png" alt="">
-                </div>
-               <div>
-                <input type="button" value="黃色" onclick="Yellow()">
-                <input type="button" value="紅色" onclick="Red()">
-                <input type="button" value="黑色" onclick="Black()">
-
-                <input type="button" value="白色" onclick=" White()">
-                <input type="button" value="綠色" onclick="Green()">
-                <input type="button" value="紫色" onclick="Purple()">
-
                
-
-               </div>
-
-              <div>
-                <input type="button" value="64G" onclick="iphone11_64()">
-                <input type="button" value="128G" onclick="iphone11_128()">
-                <input type="button" value="256G" onclick="iphone11_256()">
-                
-              </div>
-
-           
+              
    
                 
 
@@ -55,11 +83,7 @@
 
 
 
-                <div id="money">
-                    <h1>$0</h1>
-                    
-                </div>
-
+                
            
 
 
@@ -118,6 +142,10 @@
     function iphone11_256() {
     var h1= document.getElementsByTagName("h1")[0];
     h1.innerHTML = "$30400";
+    }
+
+    function iphone(){
+
     }
 
         
