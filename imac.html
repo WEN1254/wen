@@ -36,28 +36,25 @@
              <a href="https://wervfc.azurewebsites.net/Apple.html"><button >iphone</button></a>
              
              <a href="https://wervfc.azurewebsites.net/ipad.html"><button>ipad</button></a>
-             <a href="https://wervfc.azurewebsites.net/imac.html"><button>imac</button></a>
+             <a href=""><button>imac</button></a>
              
              
          </div>
          <div class="col-12">
             <div id="photo"><img
-                src="https://bs2020-01.azurewebsites.net/Fake-Apple/img/iphone11-select-2019-family.png" alt="">
+                src="https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mac-family-compare-201810?wid=750&hei=345&fmt=jpeg&qlt=95&op_usm=0.5,0.5&.v=1573512143888" alt="">
         </div>
         <div class="col-12">
-            <input type="button" value="黃色" class="buttons" onclick="Yellow()">
-            <input type="button" value="紅色" class="buttons" onclick="Red()">
-            <input type="button" value="黑色" class="buttons" onclick="Black()">
-
-            <input type="button" value="白色" class="buttons" onclick=" White()">
-            <input type="button" value="綠色" class="buttons" onclick="Green()">
-            <input type="button" value="紫色" class="buttons" onclick="Purple()">
+            <input type="button" value="太空灰色" class="buttons" onclick="gray()">
+            <input type="button" value="銀色" class="buttons" onclick="sliver()">
+          
 
         </div>
         <div class="col-12">
-            <input type="button" value="64G" class="buttons" onclick="iphone11_64()">
-            <input type="button" value="128G" class="buttons" onclick="iphone11_128()">
-            <input type="button" value="256G" class="buttons" onclick="iphone11_256()">
+            <input type="button" value="256G" class="buttons" onclick="imac_256()">
+            <input type="button" value="512G" class="buttons" onclick="imac_512()">
+            <input type="button" value="1T" class="buttons" onclick="imac_1000()">
+            <input type="button" value="2T" class="buttons" onclick="imac_2000()">
 
         </div>
         <div class="col-12">
@@ -96,15 +93,15 @@
     <script>
 
         cache_y = ""
-        function Yellow() {
+        function gray() {
 
-            cache_y = "<img src='https://bs2020-01.azurewebsites.net/Fake-Apple/img/iphone-yellow.png'>";
+            cache_y = "<img src='https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mbp16touch-space-select-201911_GEO_TW?wid=452&hei=420&fmt=jpeg&qlt=95&op_usm=0.5,0.5&.v=1573165435411'>";
             document.getElementById("photo").innerHTML = cache_y;
         }
         cache_r = ""
-        function Red() {
+        function sliver() {
 
-            cache_r = "<img src='https://bs2020-01.azurewebsites.net/Fake-Apple/img/iphone-red.png'>";
+            cache_r = "<img src='https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mbp16touch-silver-select-201911_GEO_TW?wid=452&hei=420&fmt=jpeg&qlt=95&op_usm=0.5,0.5&.v=1573153623825'>";
             document.getElementById("photo").innerHTML = cache_r;
         }
         cache_b = ""
@@ -133,17 +130,21 @@
         }
         
    
-    function iphone11_64() {
+    function imac_256() {
     var h1= document.getElementsByTagName("h1")[0];
-    h1.innerHTML = "$24900";
+    h1.innerHTML = "$51300";
     }
-    function iphone11_128() {
+    function imac_512() {
     var h1= document.getElementsByTagName("h1")[0];
-    h1.innerHTML = "$26900";
+    h1.innerHTML = "$57300";
     }
-    function iphone11_256() {
+    function imac_1000() {
     var h1= document.getElementsByTagName("h1")[0];
-    h1.innerHTML = "$30400";
+    h1.innerHTML = "$63300";
+    }
+    function imac_2000() {
+    var h1= document.getElementsByTagName("h1")[0];
+    h1.innerHTML = "$75300";
     }
 
     function iphone(){
