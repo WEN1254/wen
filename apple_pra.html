@@ -11,111 +11,467 @@
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
 
     <title>Hello, world!</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        .head {
+            width: 100%;
+            text-align: center;
+        }
+
+        .content_pic .item {
+            width: 100%;
+            text-align: center;
+
+        }
+
+        .content_color {
+            width: 100%;
+            text-align: center;
+
+        }
+
+        .content_size {
+            width: 100%;
+            text-align: center;
+
+        }
+
+        .foot_money {
+            width: 100%;
+            text-align: center;
+
+        }
+
+        .btn-outline-secondary {
+            color: black;
+            border-color: black;
+
+        }
+
+        .btn-outline-secondary:hover {
+            color: white;
+            background-color: black;
+        }
+    </style>
 </head>
-<style>
-    *{
-        padding: 0;
-        margin: 0;
-        list-style: none;
-    }
-   
-</style>
 
 <body>
-
-   
-                <div id="photo"><img
-                        src="https://bs2020-01.azurewebsites.net/Fake-Apple/img/iphone11-select-2019-family.png" alt="">
+    <div class="head">
+        <div class="row">
+            <div class="col-12">
+                <div class="item">
+                    <button onclick="iphone()">iphone</button>
+                    <button onclick="ipad()">ipad</button>
+                    <button onclick="mac()">mac</button>
                 </div>
-               <div>
-                <input type="button" value="黃色" onclick="Yellow()">
-                <input type="button" value="紅色" onclick="Red()">
-                <input type="button" value="黑色" onclick="Black()">
 
-                <input type="button" value="白色" onclick=" White()">
-                <input type="button" value="綠色" onclick="Green()">
-                <input type="button" value="紫色" onclick="Purple()">
+            </div>
 
+        </div>
+    </div>
+
+    <div class="content_pic">
+        <div class="row">
+            <div class="col-12">
+                <div class="content_pic_item">
+
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="content_color">
+        <div class="row">
+            <div class="content_color_col-12 col-12">
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <div class="content_size">
+        <div class="row">
+            <div class="content_size_col-12 col-12">
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <div class="foot_money">
+        <div class="row">
+            <div class="foot_money_col-12 col-12">
                
 
-               </div>
-
-              <div>
-                <input type="button" value="64G" onclick="run()">
-              </div>
-
-           
-   
-                
+            </div>
 
 
-
-
-
-                <div id="money">
-                    <h1>$0</h1>
-                    
-                </div>
-
-           
-
-
-
-
-
+        </div>
+    </div>
 
     <script>
+         var Product = {
+            IPhone: {
+                Detail: {
+                    productName: 'iPhone 11',
+                    baseImgUrl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone11-select-2019-family?wid=882&amp;hei=1058&amp;fmt=jpeg&amp;qlt=80&amp;op_usm=0.5,0.5&amp;.v=1567022175704'
+                },
+                OutWard: [{
+                        color: '白色',
+                        imageUrl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone11-white-select-2019?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1566956148115'
+                    },
+                    {
+                        color: '黑色',
+                        imageUrl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone11-black-select-2019?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1566956144418'
+                    },
+                    {
+                        color: '綠色',
+                        imageUrl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone11-green-select-2019?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1566956144838'
+                    },
+                    {
+                        color: '黃色',
+                        imageUrl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone11-yellow-select-2019?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1568141245782'
+                    },
+                    {
+                        color: '紫色',
+                        imageUrl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone11-purple-select-2019?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1566960958082'
+                    },
+                    {
+                        color: '紅色',
+                        imageUrl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/iphone11-red-select-2019?wid=940&hei=1112&fmt=png-alpha&qlt=80&.v=1566956144763'
+                    },
+                ],
+                Spec: {
+                    Storge: [{
+                            size: '64GB',
+                            price: 24900
+                        },
+                        {
+                            size: '128GB',
+                            price: 26900
+                        },
+                        {
+                            size: '256GB',
+                            price: 30400
+                        },
+                    ]
+                }
+            },
+            IPad: {
+                Detail: {
+                    productName: 'iPad',
+                    baseImgUrl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-hero-unselected-201909_GEO_TW?wid=372&amp;hei=606&amp;fmt=jpeg&amp;qlt=95&amp;op_usm=0.5,0.5&amp;.v=1567298453562'
+                },
+                OutWard: [{
+                        color: '太空灰色',
+                        imageUrl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-wifi-select-space-201909_GEO_TW?wid=470&hei=556&fmt=png-alpha&.v=1567443080749'
+                    },
+                    {
+                        color: '銀色',
+                        imageUrl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-wifi-select-silver-201909_GEO_TW?wid=470&hei=556&fmt=png-alpha&.v=1567299773948'
+                    },
+                    {
+                        color: '金色',
+                        imageUrl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/ipad-wifi-select-gold-201909_GEO_TW?wid=470&hei=556&fmt=png-alpha&.v=1567302181892'
+                    },
+                ],
+                Spec: {
+                    Storge: [{
+                            size: '32GB',
+                            price: 10900
+                        },
+                        {
+                            size: '128GB',
+                            price: 13900
+                        },
+                    ]
+                }
+            },
+            MacPro: {
+                Detail: {
+                    productName: 'MacPro 13',
+                    baseImgUrl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mac-family-compare-201810?wid=750&hei=345&fmt=jpeg&qlt=95&op_usm=0.5,0.5&.v=1573512143888'
+                },
+                OutWard: [{
+                        color: '太空灰色', 
+                        imageUrl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mbp16touch-space-select-201911_GEO_TW?wid=452&hei=420&fmt=jpeg&qlt=95&op_usm=0.5,0.5&.v=1573165435411'
+                    },
+                    {
+                        color: '銀色',
+                        imageUrl: 'https://store.storeimages.cdn-apple.com/8756/as-images.apple.com/is/mbp16touch-silver-select-201911_GEO_TW?wid=452&hei=420&fmt=jpeg&qlt=95&op_usm=0.5,0.5&.v=1573153623825'
+                    },
+                ],
+                Spec: {
+                    Storge: [{
+                            size: '256GB',
+                            price: 51300
+                        },
+                        {
+                            size: '512GB',
+                            price: 57300
+                        },
+                        {
+                            size: '1TB',
+                            price: 63300
+                        },
+                        {
+                            size: '2TB',
+                            price: 75300
+                        },
+                    ]
+                }
+            }
+        };
+        var pic = document.getElementsByClassName('content_pic_item')[0];
+        var color = document.getElementsByClassName('content_color_col-12')[0];
+        var type = document.getElementsByClassName('content_size_col-12')[0];
+        var price = document.getElementsByClassName('foot_money_col-12')[0];
+        var txt_price = document.createElement('h2');
+        var type_div = document.createElement('div');
+        var color_div = document.createElement('div');
+        type.appendChild(type_div);
+        color.appendChild(color_div);
+        price.appendChild(txt_price);
 
-        cache_y = ""
-        function Yellow() {
 
-            cache_y = "<img src='https://bs2020-01.azurewebsites.net/Fake-Apple/img/iphone-yellow.png'>";
-            document.getElementById("photo").innerHTML = cache_y;
+        function iphone() {
+
+            color_div.innerHTML = '';
+
+            pic.innerHTML = `<img src="${Product.IPhone.Detail.baseImgUrl}" alt="IPhone" class='rounded mx-auto d-block w-50 h-50'>`
+            add_iphone_color_btn();
+            add_iphone_storge_btn();
+            add_iphone_price();
         }
-        cache_r = ""
-        function Red() {
-
-            cache_r = "<img src='https://bs2020-01.azurewebsites.net/Fake-Apple/img/iphone-red.png'>";
-            document.getElementById("photo").innerHTML = cache_r;
+        function add_iphone_color_btn() {
+            color_div.innerHTML = '<h3 class="color mt-auto  w-100 text-center ">外觀</h3>';
+            color_div.innerHTML +=
+                `<div>
+                    <button class="btn btn_iphone_color btn-outline-secondary rounded mx-auto " onclick='iphone_pic_white()'>
+                        ${Product.IPhone.OutWard[0].color}
+                    </button> 
+                    <button class="btn btn_iphone_color btn-outline-secondary rounded mx-auto  " onclick='iphone_pic_black()'>
+                        ${Product.IPhone.OutWard[1].color}
+                    </button>
+                    <button class="btn btn_iphone_color btn-outline-secondary rounded mx-auto  " onclick='iphone_pic_green()'>
+                        ${Product.IPhone.OutWard[2].color}
+                    </button>
+                    <button class="btn btn_iphone_color btn-outline-secondary rounded mx-auto  " onclick='iphone_pic_yellow()'>
+                        ${Product.IPhone.OutWard[3].color}
+                    </button> 
+                    <button class="btn btn_iphone_color btn-outline-secondary rounded mx-auto  " onclick='iphone_pic_purple()'>
+                        ${Product.IPhone.OutWard[4].color}
+                    </button>
+                    <button class="btn btn_iphone_color btn-outline-secondary rounded mx-auto  " onclick='iphone_pic_red()'>
+                        ${Product.IPhone.OutWard[5].color}
+                    </button>
+                </div>`;
         }
-        cache_b = ""
-        function Black() {
 
-            cache_b = "<img src='https://hsulei.azurewebsites.net/Apple/apple-pic/iphone11-black-select-2019.png'>";
-            document.getElementById("photo").innerHTML = cache_b;
+        function iphone_pic_white() {
+            pic.innerHTML = `<img src="${Product.IPhone.OutWard[0].imageUrl}" alt="IPhone" class='d-block w-50 h-50 rounded mx-auto d-block'>`
         }
-        cache_w = ""
-        function White() {
 
-            cache_w = "<img src='https://hsulei.azurewebsites.net/Apple/apple-pic/iphone11-white-select-2019.png'>";
-            document.getElementById("photo").innerHTML = cache_w;
+        function iphone_pic_black() {
+            pic.innerHTML = `<img src="${Product.IPhone.OutWard[1].imageUrl}" alt="IPhone" class='d-block w-50 h-50 rounded mx-auto d-block'>`
         }
-        cache_g = ""
-        function Green() {
 
-            cache_g = "<img src='https://hsulei.azurewebsites.net/Apple/apple-pic/iphone11-green-select-2019.png'>";
-            document.getElementById("photo").innerHTML = cache_g;
+        function iphone_pic_green() {
+            pic.innerHTML = `<img src="${Product.IPhone.OutWard[2].imageUrl}" alt="IPhone" class='d-block w-50 h-50 rounded mx-auto d-block'>`
         }
-        cache_p = ""
-        function Purple() {
 
-            cache_p = "<img src='https://hsulei.azurewebsites.net/Apple/apple-pic/iphone11-purple-select-2019.png'>";
-            document.getElementById("photo").innerHTML = cache_p;
+        function iphone_pic_yellow() {
+            pic.innerHTML = `<img src="${Product.IPhone.OutWard[3].imageUrl}" alt="IPhone" class='d-block w-50 h-50 rounded mx-auto d-block'>`
         }
-        
-    //     function run() {
-    // var c = document.getElementById("money");
-    // var n = document.createElement("h1");
-    // var message = "$24900";
-    // n.appendChild(document.createTextNode(message));
-    // c.appendChild(n);
-    // }
-    function run() {
-    var h1= document.getElementsByTagName("h1")[0];
-    h1.innerHTML = "$24900";
-    }
 
-        
+        function iphone_pic_purple() {
+            pic.innerHTML = `<img src="${Product.IPhone.OutWard[4].imageUrl}" alt="IPhone" class='d-block w-50 h-50 rounded mx-auto d-block'>`
+        }
+
+        function iphone_pic_red() {
+            pic.innerHTML = `<img src="${Product.IPhone.OutWard[5].imageUrl}" alt="IPhone" class='d-block w-50 h-50 rounded mx-auto d-block'>`
+        }
+
+        function add_iphone_storge_btn() {
+            type_div.innerHTML = '<h3 class="color mt-auto  w-100 text-center ">規格</h3>';
+            type_div.innerHTML +=
+                `<div>
+                    <button class="btn btn_iphone_color btn-outline-secondary rounded mx-auto " onclick='iphone_size_64()'>
+                        ${Product.IPhone.Spec.Storge[0].size}
+                    </button> 
+                    <button class="btn btn_iphone_color btn-outline-secondary rounded mx-auto  " onclick='iphone_size_128()'>
+                        ${Product.IPhone.Spec.Storge[1].size}
+                    </button>
+                    <button class="btn btn_iphone_color btn-outline-secondary rounded mx-auto  " onclick='iphone_size_256()'>
+                        ${Product.IPhone.Spec.Storge[2].size}
+                    </button>
+                  
+                </div>`;
+
+        }
+
+        function iphone_size_64() {
+            txt_price.innerHTML = `NT$ ${Product.IPhone.Spec.Storge[0].price}`;
+
+        }
+        function iphone_size_128() {
+            txt_price.innerHTML = `NT$ ${Product.IPhone.Spec.Storge[1].price}`;
+
+        }
+        function iphone_size_256() {
+            txt_price.innerHTML = `NT$ ${Product.IPhone.Spec.Storge[2].price}`;
+
+        }
+
+        function ipad() {
+            txt_price.innerHTML='';
+            color_div.innerHTML='';
+            
+            pic.innerHTML = `<img src="${Product.IPad.Detail.baseImgUrl}" alt="IPad" class='d-block w-50 h-40 rounded mx-auto d-block'>`
+            add_ipad_color_btn();
+            add_ipad_storge_btn();
+            add_ipad_price();
+        }
+        function add_ipad_color_btn() {
+            color_div.innerHTML = '<h3 class="color mt-auto  w-100 text-center ">外觀</h3>';
+            color_div.innerHTML +=
+                `<div>
+                    <button class="btn btn_IPad_color btn-outline-secondary rounded mx-auto " onclick='IPad_pic_gray()'>
+                        ${Product.IPad.OutWard[0].color}
+                    </button> 
+                    <button class="btn btn_IPad_color btn-outline-secondary rounded mx-auto  " onclick='IPad_pic_silever()'>
+                        ${Product.IPad.OutWard[1].color}
+                    </button>
+                    <button class="btn btn_IPad_color btn-outline-secondary rounded mx-auto  " onclick='IPad_pic_gold()'>
+                        ${Product.IPad.OutWard[2].color}
+                    </button>
+                </div>`;
+
+        }
+        function IPad_pic_gray(){
+            pic.innerHTML = `<img src="${Product.IPad.OutWard[0].imageUrl}" alt="IPhone" class='d-block w-50 h-50 rounded mx-auto d-block'>`
+
+        }
+        function IPad_pic_silever(){
+            pic.innerHTML = `<img src="${Product.IPad.OutWard[1].imageUrl}" alt="IPhone" class='d-block w-50 h-50 rounded mx-auto d-block'>`
+
+        }
+
+        function IPad_pic_gold(){
+            pic.innerHTML = `<img src="${Product.IPad.OutWard[2].imageUrl}" alt="IPhone" class='d-block w-50 h-50 rounded mx-auto d-block'>`
+
+        }
+
+        function add_ipad_storge_btn() {
+            type_div.innerHTML = '<h3 class="color mt-auto  w-100 text-center ">規格</h3>';
+            type_div.innerHTML +=
+                `<div>
+                    <button class="btn btn_iphone_color btn-outline-secondary rounded mx-auto " onclick='ipad_size_32()'>
+                        ${Product.IPad.Spec.Storge[0].size}
+                    </button> 
+                    <button class="btn btn_iphone_color btn-outline-secondary rounded mx-auto  " onclick='ipad_size_128()'>
+                        ${Product.IPad.Spec.Storge[1].size}
+                    </button>
+                   
+                  
+                </div>`;
+
+        }
+        function ipad_size_32() {
+            txt_price.innerHTML = `NT$ ${Product.IPad.Spec.Storge[0].price}`;
+
+        }
+        function ipad_size_128() {
+            txt_price.innerHTML = `NT$ ${Product.IPad.Spec.Storge[1].price}`;
+
+        }
+
+        function mac() {
+            txt_price.innerHTML='';
+            color_div.innerHTML='';
+            
+            
+            pic.innerHTML = `<img src="${Product.MacPro.Detail.baseImgUrl}" alt="mac" class='d-block w-50 h-40 rounded mx-auto d-block'>`
+            add_mac_color_btn();
+            add_mac_storge_btn();
+            add_mac_price();
+        }
+        function add_mac_color_btn() {
+            color_div.innerHTML = '<h3 class="color mt-auto  w-100 text-center ">外觀</h3>';
+            color_div.innerHTML +=
+                `<div>
+                    <button class="btn btn_IPad_color btn-outline-secondary rounded mx-auto " onclick='MacPro_pic_gray()'>
+                        ${Product.MacPro.OutWard[0].color}
+                    </button> 
+                    <button class="btn btn_IPad_color btn-outline-secondary rounded mx-auto  " onclick='MacPro_pic_silever()'>
+                        ${Product.MacPro.OutWard[1].color}
+                    </button>
+                   
+                </div>`;
+
+            
+        }
+        function MacPro_pic_gray(){
+            pic.innerHTML = `<img src="${Product.MacPro.OutWard[0].imageUrl}" alt="IPhone" class='d-block w-50 h-50 rounded mx-auto d-block'>`
+
+        }
+        function MacPro_pic_silever(){
+            pic.innerHTML = `<img src="${Product.MacPro.OutWard[1].imageUrl}" alt="IPhone" class='d-block w-50 h-50 rounded mx-auto d-block'>`
+
+        }
+        function add_mac_storge_btn() {
+            type_div.innerHTML = '<h3 class="color mt-auto  w-100 text-center ">規格</h3>';
+            type_div.innerHTML +=
+                `<div>
+                    <button class="btn btn_MacPro_color btn-outline-secondary rounded mx-auto " onclick='MacPro_size_256()'>
+                        ${Product.MacPro.Spec.Storge[0].size}
+                    </button> 
+                    <button class="btn btn_MacPro_color btn-outline-secondary rounded mx-auto  " onclick='MacPro_size_512()'>
+                        ${Product.MacPro.Spec.Storge[1].size}
+                    </button>
+                    <button class="btn btn_MacPro_color btn-outline-secondary rounded mx-auto " onclick='MacPro_size_1000()'>
+                        ${Product.MacPro.Spec.Storge[2].size}
+                    </button> 
+                    <button class="btn btn_iphone_color btn-outline-secondary rounded mx-auto  " onclick='MacPro_size_2000()'>
+                        ${Product.MacPro.Spec.Storge[3].size}
+                    </button>
+                   
+                  
+                </div>`;
+
+        }
+        function MacPro_size_256() {
+            txt_price.innerHTML = `NT$ ${Product.MacPro.Spec.Storge[0].price}`;
+
+        }
+        function MacPro_size_512() {
+            txt_price.innerHTML = `NT$ ${Product.MacPro.Spec.Storge[1].price}`;
+
+        }
+        function MacPro_size_1000() {
+            txt_price.innerHTML = `NT$ ${Product.MacPro.Spec.Storge[2].price}`;
+
+        }
+        function MacPro_size_2000() {
+            txt_price.innerHTML = `NT$ ${Product.MacPro.Spec.Storge[3].price}`;
+
+        }
+
+
+
+
+
+
 
     </script>
 
