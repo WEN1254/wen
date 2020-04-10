@@ -54,7 +54,7 @@
             <input type="button" id="8" onclick="get(this.id)" value="8" class="buttons">
             <input type="button" id="9" onclick="get(this.id)" value="9" class="buttons">
     
-            <input type="button" id="C" onclick="clearNum()" value="C" class="buttons">
+            <input type="button" id="btn_answer" onclick="clearNum()" value="C" class="buttons">
     
             <br>
     
@@ -103,11 +103,16 @@
             document.getElementById("screenName").value = eval(document.getElementById("screenName").value);
             //eval把要算的東西丟進去就可以算
         }
-        function clearNum() {
-            
+
+        var cmdAnswer = document.getElementById("btn_answer");//看答案
+        cmdAnswer.onclick = function () {
             document.getElementById("screenName").value = null;
-           
         }
+        // function clearNum() {
+            
+        //     document.getElementById("screenName").value = null;
+           
+        // }
     </script>
 
     <!-- Optional JavaScript -->

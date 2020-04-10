@@ -17,7 +17,7 @@
             margin: 0;
             list-style: none;
         }
-
+        
         .head {
             width: 100%;
             text-align: center;
@@ -57,13 +57,24 @@
             color: white;
             background-color: black;
         }
+
+        @media screen and (min-width:768px ){
+            #IPhone{
+                width: 30%;
+                height: 30%;
+            }
+
+            
+            
+            
+            }
     </style>
 </head>
 
 <body>
     <div class="head">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12 col-md-12">
                 <div class="item">
                     <button onclick="iphone()">iphone</button>
                     <button onclick="ipad()">ipad</button>
@@ -77,7 +88,7 @@
 
     <div class="content_pic">
         <div class="row">
-            <div class="col-12">
+            <div class="col-12  col-md-12">
                 <div class="content_pic_item">
 
                 </div>
@@ -90,7 +101,7 @@
 
     <div class="content_color">
         <div class="row">
-            <div class="content_color_col-12 col-12">
+            <div class=" col-md-12 content_color_col-12 col-12">
 
 
             </div>
@@ -100,7 +111,7 @@
 
     <div class="content_size">
         <div class="row">
-            <div class="content_size_col-12 col-12">
+            <div class=" col-md-12 content_size_col-12 col-12">
 
             </div>
 
@@ -110,7 +121,7 @@
 
     <div class="foot_money">
         <div class="row">
-            <div class="foot_money_col-12 col-12">
+            <div class=" col-md-12 foot_money_col-12 col-12">
                
 
             </div>
@@ -254,7 +265,7 @@
             add_iphone_price();
         }
         function add_iphone_color_btn() {
-            color_div.innerHTML = '<h3 class="color mt-auto  w-100 text-center ">外觀</h3>';
+            color_div.innerHTML = '<h3 class=" IPhone color mt-auto  w-100 text-center ">外觀</h3>';
             color_div.innerHTML +=
                 `<div>
                     <button class="btn btn_iphone_color btn-outline-secondary rounded mx-auto " onclick='iphone_pic_white()'>
@@ -279,27 +290,27 @@
         }
 
         function iphone_pic_white() {
-            pic.innerHTML = `<img src="${Product.IPhone.OutWard[0].imageUrl}" alt="IPhone" class='d-block w-50 h-50 rounded mx-auto d-block'>`
+            pic.innerHTML = `<img src="${Product.IPhone.OutWard[0].imageUrl}" alt="IPhone" id="IPhone" class='d-block w-50 h-50 rounded mx-auto d-block'>`
         }
 
         function iphone_pic_black() {
-            pic.innerHTML = `<img src="${Product.IPhone.OutWard[1].imageUrl}" alt="IPhone" class='d-block w-50 h-50 rounded mx-auto d-block'>`
+            pic.innerHTML = `<img src="${Product.IPhone.OutWard[1].imageUrl}" alt="IPhone" id="IPhone" class='d-block w-50 h-50 rounded mx-auto d-block'>`
         }
 
         function iphone_pic_green() {
-            pic.innerHTML = `<img src="${Product.IPhone.OutWard[2].imageUrl}" alt="IPhone" class='d-block w-50 h-50 rounded mx-auto d-block'>`
+            pic.innerHTML = `<img src="${Product.IPhone.OutWard[2].imageUrl}" alt="IPhone" id="IPhone" class='d-block w-50 h-50 rounded mx-auto d-block'>`
         }
 
         function iphone_pic_yellow() {
-            pic.innerHTML = `<img src="${Product.IPhone.OutWard[3].imageUrl}" alt="IPhone" class='d-block w-50 h-50 rounded mx-auto d-block'>`
+            pic.innerHTML = `<img src="${Product.IPhone.OutWard[3].imageUrl}" alt="IPhone" id="IPhone" class='d-block w-50 h-50 rounded mx-auto d-block'>`
         }
 
         function iphone_pic_purple() {
-            pic.innerHTML = `<img src="${Product.IPhone.OutWard[4].imageUrl}" alt="IPhone" class='d-block w-50 h-50 rounded mx-auto d-block'>`
+            pic.innerHTML = `<img src="${Product.IPhone.OutWard[4].imageUrl}" alt="IPhone" id="IPhone" class='d-block w-50 h-50 rounded mx-auto d-block'>`
         }
 
         function iphone_pic_red() {
-            pic.innerHTML = `<img src="${Product.IPhone.OutWard[5].imageUrl}" alt="IPhone" class='d-block w-50 h-50 rounded mx-auto d-block'>`
+            pic.innerHTML = `<img src="${Product.IPhone.OutWard[5].imageUrl}" alt="IPhone" id="IPhone" class='d-block w-50 h-50 rounded mx-auto d-block'>`
         }
 
         function add_iphone_storge_btn() {
