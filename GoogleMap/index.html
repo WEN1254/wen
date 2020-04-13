@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Simple Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+             * element that contains the map. */
+        #map {
+            height: 100%;
+        }
+
+        /* Optional: Makes the sample page fill the window. */
+        html,
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>口罩分布
+
+    </h1>
+    <div id="map"></div>
+    <script>
+        function initMap() {
+            var myLatLng = { lat: 24.757227, lng: 120.952295 };
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 10,
+                center: myLatLng
+            });
+            // var marker = new google.maps.Marker({
+            //     position: myLatLng,
+            //     map: map,
+            //     title: 'Hello World!'
+            // });
+            $.ajax({
+                type: "Get",
+                url: "https://findmasks.herokuapp.com/places",
+                url:"https://maskmap.azurewebsites.net/api/mask/getmaskstock",
+                success: function (response) {
+                    let longitude = [];
+                    let latitude = [];
+                    let mask = [];
+
+
+                    for (var i = 0; i < response.features.length; i++) {
+                        longitude[i] = response.features[i].geometry.coordinates[1];
+                        latitude[i] = response.features[i].geometry.coordinates[0];
+                        //
+                        // markers = new google.maps.Marker({
+                        //     position: { lat: longitude[i], lng: latitude[i] },
+                        //     map: map,
+                        //     icon:{
+                        //         url:"擷取.PNG",
+                        //     }
+                        // })
+                        mask[i] = response.features[i].properties.masksLeft;
+                        if (mask[i] > 100) {
+                            markers = new google.maps.Marker({
+                                position: { lat: longitude[i], lng: latitude[i] },
+                                map: map,
+                                icon: {
+                                    url: "1.png",
+                                    scaleSize:new google.maps.Size(1,1)
+                                }
+
+                            })
+
+
+                        }
+                        else{
+                            markers = new google.maps.Marker({
+                                position: { lat: longitude[i], lng: latitude[i] },
+                                map: map,
+                                icon: {
+                                    url: "2.png",
+                                }
+
+                            })
+
+                        }
+                        
+                        
+                    }
+
+
+
+
+
+
+                }
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAlKWP4uWjQIR3WDAWLAu6rUhBfc3_ppag&callback=initMap"
+        async defer></script>
+</body>
+
+</html>
