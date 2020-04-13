@@ -12,6 +12,23 @@
   </head>
   <body>
     <script>
+        let products = "";
+
+window.onload = function Jsontest() {
+    let xhr = new XMLHttpRequest();
+    xhr.onload = function () {
+        products = JSON.parse(this.responseText);
+
+        
+        
+        
+
+
+
+    }
+    xhr.open("GET", 'https://raw.githubusercontent.com/WEN1254/wen/master/apple.json');
+    xhr.send();
+}
         
                 let body = document.querySelector('body');
                 let rowDiv = document.createElement('div');
