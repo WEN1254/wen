@@ -219,6 +219,14 @@
                         
                         
 
+                    } btn.onclick=function(){
+                    body.innerHTML=null;
+                    title.innerHTML=lol[i].name;
+                    for(let j=0;j<Object.keys(lol[i].ability).length;j++){
+                        body.innerHTML += `${Object.keys(lol[i].ability)[j]}: ${Object.values(lol[i].ability)[j]}<br>`;
+                        
+                        
+
                     }
                     
                     
