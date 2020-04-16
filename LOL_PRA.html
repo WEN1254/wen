@@ -17,6 +17,9 @@
         margin: 0;
         list-style: none;
     }
+    .col-12{
+        width: 150px;
+    }
     
 </style>
 
@@ -42,7 +45,7 @@
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
+                        
                     </div>
                 </div>
             </div>
@@ -204,6 +207,7 @@
                 let tr = document.createElement('tr');
                 let d1 = document.getElementById("d1");
                 let btn = document.createElement('button');
+                btn.setAttribute("class", "col-12");
                 btn.setAttribute("data-toggle", "modal");
                 btn.setAttribute("data-target", "#exampleModalCenter");
                 // btn.setAttribute("onclick", 'a(this.id)');
