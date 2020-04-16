@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../Modules/MyHelper.js"></script>
+</head>
+<style>
+    *{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    td{
+        width: 200px;
+        height: 50px;
+        border: 1px solid black;
+    } 
+    table{
+        border: 1px solid black;
+    }
+    
+</style>
+
+<body>
+    <div id="d1">
+        <!-- <table>
+          <tr>
+              <td>1</td>
+              <td>2</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>4</td>
+        </tr>
+      </table> -->
+
+    </div>
+
+    <script>
+        var Taiwan;
+        var taiwan;
+        window.onload = function () {
+
+
+            let xhr = new XMLHttpRequest;
+
+            xhr.open("Get", "https://raw.githubusercontent.com/WEN1254/wen/master/TaiwanAddress.js");
+            xhr.send();
+            xhr.onload = function () {
+
+                Taiwan = JSON.parse(this.responseText);
+                var zipCode = [];
+                Taiwan.forEach(element => {
+                    let obj = { City: element.CityName, Districts: [] };
+                    element.AreaList.forEach((area) => {
+                        //console.log(obj.Districts);
+                        obj.Districts.push({ District: area.AreaName, Zip: area.ZipCode });
+                    })
+                    //zipCode.push({City:`${element}`})
+                    //debugger;
+                    zipCode.push(obj);
+                });
+
+
+                 console.log(zipCode);
+                //  debugger;
+                var d1 = document.getElementById("d1");
+                var table = document.createElement("table");
+                table.borde
+                for (let i = 0; i < Taiwan.length; i++) {
+                    for (let j = 0; j < Taiwan[i].AreaList.length; j++) {
+                        let div = document.createElement("div");
+                        let tr = document.createElement("tr");
+                        let td_city = document.createElement("td");
+                        let td_area = document.createElement("td");
+                        let td_code = document.createElement("td");
+                        td_city.innerHTML = Taiwan[i].CityName;
+                        td_area.innerHTML = Taiwan[i].AreaList[j].AreaName;
+                        td_code.innerHTML = Taiwan[i].AreaList[j].ZipCode;
+                        tr.appendChild(td_city);
+                        tr.appendChild(td_area);
+                        tr.appendChild(td_code);
+                        div.appendChild(tr);
+                        table.appendChild(div);
+                        d1.appendChild(table);
+
+
+                    }
+                    //  let div = document.createElement("div");
+                    //  let tr = document.createElement("tr");
+                    //  let td_area = document.createElement("td");
+                    //  let td_code = document.createElement("td");
+                    //  td_area.innerHTML=Taiwan[0].AreaList[i].AreaName;
+                    //  td_code.innerHTML=Taiwan[0].AreaList[i].ZipCode;
+                    //  tr.appendChild(td_area);
+                    //  tr.appendChild(td_code);
+                    //  div.appendChild(tr);
+                    //  table.appendChild(div);
+                    //  d1.appendChild(table);
+
+                }
+
+
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
