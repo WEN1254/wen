@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+        div {
+            width: 120px;
+            height: 120px;
+        }
+
+        .pic {
+            background-image: url(55.PNG);
+        }
+
+        #d1 {
+            background-position: 0px 0px;
+        }
+
+        #d2 {
+            background-position: -120px 0px;
+        }
+
+        #d3 {
+            background-position: -240px 0px;
+        }
+
+        #d4 {
+            background-position: 0px -120px;
+        }
+
+        #d5 {
+            background-position: -120px -120px;
+        }
+
+        #d6 {
+            background-position: -240px -120px;
+        }
+
+        #d7 {
+            background-position: 0px -240px;
+        }
+
+        #d8 {
+            background-position: -120px -240px;
+        }
+
+        #d9 {
+            background-position: -240px -240px;
+        }
+        #put{
+            position: relative;
+            width: 400px;
+            height: 400px;
+            border: 2px solid black;
+            top: -500px;
+            left: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <table border="1">
+        <tr>
+            <td>
+                <div id="f1" ondrop="drop(event)" ondragover="over(event)">
+                    <div class="pic" id="d1" draggable="true" ondragstart="drag(event)"></div>
+                </div>
+            </td>
+            <td>
+                <div id="f2" ondrop="drop(event)" ondragover="over(event)">
+                    <div class="pic" id="d2" draggable="true" ondragstart="drag(event)"></div>
+                </div>
+            </td>
+            <td>
+                <div id="f3" ondrop="drop(event)" ondragover="over(event)">
+                    <div class="pic" id="d3" draggable="true" ondragstart="drag(event)"></div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div id="f4" ondrop="drop(event)" ondragover="over(event)">
+                    <div class="pic" id="d4" draggable="true" ondragstart="drag(event)"></div>
+                </div>
+            </td>
+            <td>
+                <div id="f5" ondrop="drop(event)" ondragover="over(event)">
+                    <div class="pic" id="d5" draggable="true" ondragstart="drag(event)"></div>
+                </div>
+            </td>
+            <td>
+                <div id="f6" ondrop="drop(event)" ondragover="over(event)">
+                    <div class="pic" id="d6" draggable="true" ondragstart="drag(event)"></div>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <div id="f7" ondrop="drop(event)" ondragover="over(event)">
+                    <div class="pic" id="d7" draggable="true" ondragstart="drag(event)"></div>
+                </div>
+            </td>
+            <td>
+                <div id="f8" ondrop="drop(event)" ondragover="over(event)">
+                    <div class="pic" id="d8" draggable="true" ondragstart="drag(event)"></div>
+                </div>
+            </td>
+            <td>
+                <div id="f9" ondrop="drop(event)" ondragover="over(event)">
+                    <div class="pic" id="d9" draggable="true" ondragstart="drag(event)"></div>
+                </div>
+            </td>
+        </tr>
+    </table>
+    
+
+    <input type="button" value="打亂" onclick="radom()">
+   
+    <input id="file" type="file" onclick="change_pic()">
+    <div><img src="55.PNG" alt=""></div>
+   
+    <script>
+        function over(e) {
+            e.preventDefault();
+        }
+
+
+        function drag(e) {
+
+            var id = e.target.id;
+
+
+            e.dataTransfer.setData("id", id);
+        }
+
+
+        function drop(e) {
+
+            var get = e.dataTransfer.getData("id");
+
+
+            var end = e.target.id;
+
+
+            var get_id = document.getElementById(get);
+
+            var end_id = document.getElementById(end);
+
+            var get_Parent = get_id.parentNode;
+            var end_Parent = end_id.parentNode;
+
+
+            get_Parent.appendChild(end_id);
+            end_Parent.appendChild(get_id);
+
+            check();
+
+        }
+
+
+
+        function check() {
+            var count = 0;
+            var pics = document.getElementsByClassName("pic");
+            for (var i = 0; i < pics.length; i++) {
+                var pic = pics[i];
+                var div = pic.parentNode;
+
+                var pic_id = pic.getAttribute("id");
+                var div_id = div.getAttribute("id");
+                if (pic_id.replace("d", "") == div_id.replace("f", "")) {
+                    count++
+                } else {
+                    return;
+                }
+
+
+            }
+            if (count == 9) {
+                alert("遊戲結束");
+            }
+        }
+
+        function radom() {
+            var pics = document.getElementsByClassName('pic');
+            for (var i = 0; i < 100; i++) {
+
+                var m = parseInt(Math.random() * 9);
+                var n = parseInt(Math.random() * 9);
+
+
+
+                var picmp = pics[m].parentNode;
+                var picnp = pics[n].parentNode;
+
+                picmp.appendChild(pics[n]);
+                picnp.appendChild(pics[m]);
+            }
+
+        }
+
+        
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
