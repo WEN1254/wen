@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        body {
+            font-family: Verdana, sans-serif;
+        }
+
+        .head {
+
+            width: 100%;
+            background: #1abc9c;
+            text-align: center;
+        }
+
+        .head ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        .head ul li {
+            color: white;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .head .prev {
+            float: left;
+            padding-top: 10px;
+        }
+
+        .head .next {
+            float: right;
+            padding-top: 10px;
+        }
+
+        #month {
+            display: table;
+            width: 100%;
+            border: 1px solid black;
+
+
+        }
+
+        #weeks,
+        #days {
+            display: table-row;
+
+        }
+
+        #weeks div,
+        #days div {
+            display: table-cell;
+            width: calc(100%/7);
+            height: 100px;
+            border: 1px solid black;
+        }
+
+        #weeks div {
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+        }
+
+        #days div {
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+    
+
+    <div class="head">
+        <ul>
+            <button>
+                < </button>
+                    <button>
+                        >
+                    </button>
+
+
+                    <li>
+                        4<br>
+                        <span style="font-size:18px">2020</span>
+                    </li>
+        </ul>
+    </div>
+    <div id="month">
+
+    </div>
+
+
+    <script>
+
+
+        window.onload = function () {
+            
+            function getDaysOfMonth(y, m) {
+                var date = new Date(y, m, 0);
+                var days = date.getDate();
+                return days;
+            }
+            function prevMonth(y, m) {
+                return { y: m == 1 ? y - 1 : y, m: m == 1 ? 12 : (m - 1) };
+            }
+            function nextMonth(y, m) {
+                return { y: m == 12 ? y + 1 : y, m: m == 12 ? 1 : (m + 1) };
+            }
+            function creat_month(y, m) {
+                var firstDay = new Date(y, m - 1, 1).getDay();
+                var monthCount = getDaysOfMonth(y, m);
+
+                var weekCount = Math.ceil(getDaysOfMonth(y, m) / 7);
+                var p = prevMonth(y, m);
+                var n= nextMonth(y, m);
+
+
+                var lastMonthDays = new Date(y, m - 1, 0).getDate();
+                console.log( monthCount,lastMonthDays);
+
+                var a = [];
+                for (i = 0; i < weekCount; i++) {
+                    a[i] = [];
+                    for (j = 0; j < 7; j++) {
+                        var d = (i * 7 + j - firstDay + 1);
+                        var m2 = m;
+                        var y2 = y;
+                        
+                        if (d > monthCount) {
+                            d = d-monthCount;
+                            m2 = n.m;
+                            y2 = n.y;
+
+                        }
+                        if (d <=0) {
+                            d = d + lastMonthDays;
+                            m2 = p.m;
+                            y2 = p.y;
+                        }
+                        a[i][j] =  d ;
+                    }
+                }
+
+
+
+
+                 console.log(a);
+               var  monthArr=a;
+            //    debugger;
+                var month=document.getElementById("month");
+                var weeks=document.createElement("div");
+                weeks.setAttribute("id","weeks");
+                var week=["日","一","二","三","四","五","六"];
+                
+                for(var i=0;i<week.length;i++){
+                    var div=document.createElement("div");
+                    div.innerHTML=week[i];
+                    
+                    weeks.appendChild(div);
+
+                }
+               month.appendChild(weeks);
+               for(var i=0;i<weekCount;i++){
+                var day=document.createElement("div");
+                day.setAttribute("id","days");
+                   for(var j=0;j<monthArr[i].length;j++){
+                       var div=document.createElement("div");
+                       div.innerHTML=monthArr[i][j];
+                       day.appendChild(div);
+                       
+
+                   }
+                   month.appendChild(day);
+               }
+               
+
+              
+
+               console.log(weekCount);
+            }
+           
+            
+            creat_month(2020,4);
+            
+
+
+        }
+    </script>
+
+</body>
+
+</html>
