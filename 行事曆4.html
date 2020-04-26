@@ -108,7 +108,7 @@
 
         var title = document.getElementById("title");
         var div = document.createElement("div");
-        div.innerHTML = `${this_year}/${this_month}`;
+        div.innerHTML = `${this_year}.${this_month}`;
         title.appendChild(div);
         //console.log(date, this_month, this_day);
 
@@ -191,7 +191,7 @@
             var title = document.getElementById("title");
             title.innerHTML = "";
             var div = document.createElement("div");
-            div.innerHTML = `${this_year}年${this_month}月`;
+            div.innerHTML = `${this_year}.${this_month}`;
             title.appendChild(div);
 
             create_month();
@@ -202,7 +202,7 @@
             var title = document.getElementById("title");
             title.innerHTML = "";
             var div = document.createElement("div");
-            div.innerHTML = `${this_year}年${this_month}月`;
+            div.innerHTML = `${this_year}.${this_month}`;
             title.appendChild(div);
             create_month();
         }
