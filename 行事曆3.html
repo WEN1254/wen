@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        body {
+            font-family: Verdana, sans-serif;
+        }
+
+        .head {
+
+            width: 100%;
+            background: #1abc9c;
+            text-align: center;
+        }
+
+        .head ul {
+            margin: 0;
+            padding: 0;
+        }
+
+        .head ul li {
+            color: white;
+            font-size: 20px;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+
+        .head .prev {
+            float: left;
+            padding-top: 10px;
+        }
+
+        .head .next {
+            float: right;
+            padding-top: 10px;
+        }
+
+        #month {
+            display: table;
+            width: 100%;
+            border: 1px solid black;
+
+
+        }
+
+        #weeks,
+        #days {
+            display: table-row;
+
+        }
+
+        #weeks div,
+        #days div {
+            display: table-cell;
+            width: calc(100%/7);
+            height: 100px;
+            border: 1px solid black;
+        }
+
+        #weeks div {
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+        }
+
+        #days div {
+            height: 100px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <div class="head">
+        <ul>
+            <button onclick="MinMonth()">
+                < </button>
+                    <button onclick="AddMonth()">
+                        >
+                    </button>
+
+
+                    <li id="title">
+
+                    </li>
+        </ul>
+    </div>
+    <div id="month">
+
+    </div>
+
+    <script>
+        var date = new Date();
+        var this_year = date.getFullYear();
+        var this_month = (date.getMonth() + 1);
+        var this_day = date.getDate();
+
+        var title = document.getElementById("title");
+        var div = document.createElement("div");
+        div.innerHTML = `${this_year}年${this_month}月`;
+        title.appendChild(div);
+        //console.log(date, this_month, this_day);
+
+        function create_month() {
+            var month = document.getElementById("month");
+            month.innerHTML = '';
+            var firstDay = new Date(this_year, this_month - 1, 1).getDay();
+
+            var curMonthDays = new Date(this_year, this_month, 0).getDate();
+            var lastMonthDays = new Date(this_year, this_month - 1, 0).getDate();
+
+            var weekCount = Math.ceil(curMonthDays / 7);
+
+            var a = [];
+            for (var i = 0; i < weekCount; i++) {
+                a[i] = [];
+                for (var j = 0; j < 7; j++) {
+                    var d = (i * 7 + j - firstDay + 1);
+                    if (d > curMonthDays) {
+                        d = d - curMonthDays;
+
+
+                    }
+                    if (d <= 0) {
+                        d = d + lastMonthDays;
+
+                    }
+                    a[i][j] = d;
+
+
+
+
+
+
+
+
+                }
+
+            }
+
+            // console.log(firstDay,curMonthDays,lastMonthDays,weekCount);
+            // console.log(a);
+            var monthArr = a;
+            //    debugger;
+            var month = document.getElementById("month");
+            month.innerHTML = null;
+            var weeks = document.createElement("div");
+            weeks.setAttribute("id", "weeks");
+            var week = ["Sun", "Mon", "Tue", "Wen", "Thur", "Fri", "Sat"];
+
+            for (var i = 0; i < week.length; i++) {
+                var div = document.createElement("div");
+                div.innerHTML = week[i];
+
+                weeks.appendChild(div);
+
+            }
+            month.appendChild(weeks);
+            for (var i = 0; i < weekCount; i++) {
+                var day = document.createElement("div");
+                day.setAttribute("id", "days");
+                for (var j = 0; j < monthArr[i].length; j++) {
+                    var div = document.createElement("div");
+                    div.innerHTML = monthArr[i][j];
+                    day.appendChild(div);
+
+
+                }
+                month.appendChild(day);
+            }
+
+
+        }
+        create_month();
+        function AddMonth() {
+
+            this_month++;
+
+
+            var title = document.getElementById("title");
+            title.innerHTML = "";
+            var div = document.createElement("div");
+            div.innerHTML = `${this_year}年${this_month}月`;
+            title.appendChild(div);
+
+            create_month();
+        }
+
+        function MinMonth() {
+            this_month--;
+            var title = document.getElementById("title");
+            title.innerHTML = "";
+            var div = document.createElement("div");
+            div.innerHTML = `${this_year}年${this_month}月`;
+            title.appendChild(div);
+            create_month();
+        }
+
+
+    </script>
+
+
+
+</body>
+
+</html>

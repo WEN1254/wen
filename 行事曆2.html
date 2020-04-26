@@ -84,16 +84,15 @@
 
     <div class="head">
         <ul>
-            <button>
+            <button onclick="MinMonth()">
                 < </button>
-                    <button>
+                    <button onclick="AddMonth()">
                         >
                     </button>
 
 
-                    <li>
-                        4<br>
-                        <span style="font-size:18px">2020</span>
+                    <li id="title">
+                        
                     </li>
         </ul>
     </div>
@@ -106,6 +105,14 @@
 
 
         window.onload = function () {
+            var date=new Date;
+            var this_mon=(date.getMonth()+1);
+            var this_year=date.getFullYear();
+            var title= document.getElementById("title");
+            var div=document.createElement("div");
+            div.innerHTML=`${this_year}年${this_mon}月`;
+            title.appendChild(div);
+
             
             function getDaysOfMonth(y, m) {
                 var date = new Date(y, m, 0);
@@ -160,6 +167,7 @@
                var  monthArr=a;
             //    debugger;
                 var month=document.getElementById("month");
+                month.innerHTML=null;
                 var weeks=document.createElement("div");
                 weeks.setAttribute("id","weeks");
                 var week=["S","M","T","W","T","F","S"];
@@ -189,14 +197,25 @@
               
 
                console.log(weekCount);
+               function MinMonth(){
+                this_mon--;
+                console.log(this_mon);
+                creat_month(this_year,this_mon);
+                
+
+s
+            }
             }
            
             
-            creat_month(2020,4);
+            creat_month(this_year,this_mon);
+
+            
             
 
 
         }
+       
     </script>
 
 </body>
