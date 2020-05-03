@@ -99,6 +99,7 @@
     <div id="month">
 
     </div>
+    
 
     <script>
         var date = new Date();
@@ -172,6 +173,14 @@
                 day.setAttribute("id", "days");
                 for (var j = 0; j < monthArr[i].length; j++) {
                     var div = document.createElement("div");
+                    // div.onclick=function(){
+                    //     var input=document.createElement("input");
+                    //     var button=document.createElement("button");
+                    //     day.appendChild(input);
+                    //     day.appendChild(button);
+
+                        
+                    // }
                     div.innerHTML = monthArr[i][j];
                     day.appendChild(div);
 
@@ -179,6 +188,8 @@
                 }
                 month.appendChild(day);
             }
+            
+
 
 
         }

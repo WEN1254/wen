@@ -1,0 +1,311 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    ul {
+        list-style-type: none;
+    }
+
+    body {
+        font-family: Verdana, sans-serif;
+    }
+
+    .head {
+
+        width: 100%;
+        background: #1abc9c;
+        text-align: center;
+    }
+
+    .head ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    .head ul li {
+        color: white;
+        font-size: 20px;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+    }
+
+    .head .prev {
+        float: left;
+        padding-top: 10px;
+    }
+
+    .head .next {
+        float: right;
+        padding-top: 10px;
+    }
+
+    #month {
+        display: table;
+        width: 100%;
+        border: 1px solid black;
+
+
+    }
+
+    #weeks,
+    #days {
+        display: table-row;
+
+    }
+
+    #weeks div,
+    #days li {
+        display: table-cell;
+        width: calc(100%/7);
+        height: 100px;
+        border: 1px solid black;
+    }
+
+    #weeks div {
+        height: 35px;
+        line-height: 35px;
+        text-align: center;
+    }
+
+    #days li {
+        height: 100px;
+    }
+</style>
+
+<body>
+    <div class="head">
+        <ul>
+            <button onclick="MinMonth()">
+                < </button>
+                    <button onclick="AddMonth()">
+                        >
+                    </button>
+
+
+                    <li id="title">
+
+                    </li>
+        </ul>
+    </div>
+    <div id="month">
+
+    </div>
+
+    <!-- Button trigger modal -->
+    <button type="button" id="exampleModal1" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Launch demo modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body" id="modal-body">
+                    <input type="text" id="input">
+
+                </div>
+                <div class="modal-footer" id="modal-footer">
+                    <button type="button" class="btn btn-primary">save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        var date = new Date();
+        var this_year = date.getFullYear();
+        var this_month = (date.getMonth() + 1);
+        var this_day = date.getDate();
+
+        var title = document.getElementById("title");
+        var div = document.createElement("div");
+        div.innerHTML = `${this_year}.${this_month}`;
+        title.appendChild(div);
+        //console.log(date, this_month, this_day);
+
+        function create_month() {
+            var month = document.getElementById("month");
+            month.innerHTML = '';
+            var firstDay = new Date(this_year, this_month - 1, 1).getDay();
+
+            var curMonthDays = new Date(this_year, this_month, 0).getDate();
+            var lastMonthDays = new Date(this_year, this_month - 1, 0).getDate();
+
+            var weekCount = Math.ceil(curMonthDays / 7);
+
+            var a = [];
+            for (var i = 0; i < weekCount; i++) {
+                a[i] = [];
+                for (var j = 0; j < 7; j++) {
+                    var d = (i * 7 + j - firstDay + 1);
+                    if (d > curMonthDays) {
+                        d = d - curMonthDays;
+
+
+                    }
+                    if (d <= 0) {
+                        d = d + lastMonthDays;
+
+                    }
+                    a[i][j] = d;
+
+
+
+
+
+
+
+
+                }
+
+            }
+
+            // console.log(firstDay,curMonthDays,lastMonthDays,weekCount);
+            // console.log(a);
+            var monthArr = a;
+
+            var month = document.getElementById("month");
+            month.innerHTML = null;
+            var weeks = document.createElement("div");
+            weeks.setAttribute("id", "weeks");
+            var week = ["Sun", "Mon", "Tue", "Wen", "Thur", "Fri", "Sat"];
+
+            for (var i = 0; i < week.length; i++) {
+                var div = document.createElement("div");
+                div.innerHTML = week[i];
+
+                weeks.appendChild(div);
+
+            }
+            month.appendChild(weeks);
+            for (var i = 0; i < weekCount; i++) {
+                var day = document.createElement("div");
+                day.setAttribute("id", "days");
+                for (var j = 0; j < monthArr[i].length; j++) {
+                    var div_day = document.createElement("li");
+                    div_day.setAttribute("id", `${monthArr[i][j]}`);
+                    // var btn = document.createElement("button");
+                    // btn.setAttribute("id", `${monthArr[i][j]}`)
+                    // btn.setAttribute("class", "btn-primary");
+                    // btn.setAttribute("data-toggle", "modal");
+                    // btn.setAttribute("data-target", "#exampleModal");
+                    // btn.innerHTML = "新增";
+
+                    var new_event = "";
+                    let lis = document.querySelectorAll('li');
+                    for (let li of lis) {
+                        li.addEventListener('click', function () {
+                            $('#exampleModal').modal('toggle');
+                            new_event = li;
+                        });
+
+                        let btn = document.querySelector('.modal-footer button');
+                        btn.onclick = close;
+                    }
+                    function close() {
+                        let input = document.querySelector('input');
+                        
+                        new_event.innerText += `\n${input.value}`;
+                    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    div_day.innerHTML = monthArr[i][j];
+                    // div_day.appendChild(btn);
+                    day.appendChild(div_day);
+
+
+                }
+                month.appendChild(day);
+            }
+
+
+
+
+
+        }
+
+
+
+
+
+        create_month();
+        function AddMonth() {
+
+            this_month++;
+
+
+            var title = document.getElementById("title");
+            title.innerHTML = "";
+            var div = document.createElement("div");
+            div.innerHTML = `${this_year}.${this_month}`;
+            title.appendChild(div);
+
+            create_month();
+        }
+
+        function MinMonth() {
+            this_month--;
+            var title = document.getElementById("title");
+            title.innerHTML = "";
+            var div = document.createElement("div");
+            div.innerHTML = `${this_year}.${this_month}`;
+            title.appendChild(div);
+            create_month();
+        }
+
+
+    </script>
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
