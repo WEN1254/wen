@@ -61,6 +61,9 @@
 
 
     }
+    .red{
+        color: red;
+    }
 
     #weeks,
     #days {
@@ -106,7 +109,7 @@
 
     </div>
 
-  
+
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
@@ -142,6 +145,7 @@
         div.innerHTML = `${this_year}.${this_month}`;
         title.appendChild(div);
         //console.log(date, this_month, this_day);
+        
 
         function create_month() {
             var month = document.getElementById("month");
@@ -204,14 +208,19 @@
                 for (var j = 0; j < monthArr[i].length; j++) {
                     var div_day = document.createElement("li");
                     div_day.setAttribute("id", `${monthArr[i][j]}`);
-                    // var btn = document.createElement("button");
-                    // btn.setAttribute("id", `${monthArr[i][j]}`)
-                    // btn.setAttribute("class", "btn-primary");
-                    // btn.setAttribute("data-toggle", "modal");
-                    // btn.setAttribute("data-target", "#exampleModal");
-                    // btn.innerHTML = "新增";
 
-                    var new_event = "";
+
+                
+
+                    div_day.innerHTML = monthArr[i][j];
+                    
+                    day.appendChild(div_day);
+
+
+                }
+                month.appendChild(day);
+            }
+            var new_event = "";
                     let lis = document.querySelectorAll('li');
                     for (let li of lis) {
                         li.addEventListener('click', function () {
@@ -224,35 +233,9 @@
                     }
                     function close() {
                         let input = document.querySelector('input');
-                        
+
                         new_event.innerText += `\n${input.value}`;
                     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-                    div_day.innerHTML = monthArr[i][j];
-                    // div_day.appendChild(btn);
-                    day.appendChild(div_day);
-
-
-                }
-                month.appendChild(day);
-            }
-
 
 
 
@@ -262,12 +245,17 @@
 
 
 
-
+        
         create_month();
+        var today=document.getElementById(`${this_day}`);
+        today.setAttribute("class","red");
         function AddMonth() {
 
             this_month++;
-
+            if (this_month == 13) {
+                this_month = 1;
+                this_year++;
+            }
 
             var title = document.getElementById("title");
             title.innerHTML = "";
@@ -280,6 +268,10 @@
 
         function MinMonth() {
             this_month--;
+            if (this_month == 0) {
+                this_month = 12;
+                this_year--;
+            }
             var title = document.getElementById("title");
             title.innerHTML = "";
             var div = document.createElement("div");
