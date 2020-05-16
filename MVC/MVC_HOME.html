@@ -18,6 +18,37 @@
             margin: 0;
             list-style: none;
         }
+        .head{
+            display: flex;
+            justify-content: flex-end;
+            padding: 0 15px;
+        }
+        .head a{
+            
+            color: black;
+            text-decoration: none;
+            
+        }
+        .head a:hover{
+            color: gray;
+        }
+        .collapse a{
+            color: black;
+        }
+        .collapse .search{
+            padding: 0 30px;
+        }
+        .announcement{
+    width: 100%;
+    position: sticky;
+            top: 70px;
+            z-index: 1;
+    background-color: rgb(24, 33, 71);
+    color: white;
+    text-align: center;
+    
+}
+
 
         .find {
             width: 100%;
@@ -103,69 +134,70 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
-        <a class="navbar-brand" href="#">i 家具</a>
+    <div class="head">
+        <a href="">SIGN IN</a>
+        
+    </div>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+        <a class="navbar-brand" href="#"><img src="https://www.bludot.com/static/version1587564758/frontend/Lyonscg/bludot/en_US/images/logo.svg" alt=""></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto ">
+            <ul class="navbar-nav mr-auto  ml-auto">
                 <li class="nav-item active">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        產品
-
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">熱門產品</a>
-                        <a class="dropdown-item" href="#">椅子</a>
-
-                        <a class="dropdown-item" href="#">桌子</a>
-                    </div>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        展示
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">新產品</a>
-                        <a class="dropdown-item" href="#">開箱</a>
-
-
-                    </div>
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        支持
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">聯絡客服</a>
-                        <a class="dropdown-item" href="#">保固</a>
-
-
-                    </div>
-                </li>
-                <li class="nav-item dropdown ">
-                    <a class="nav-link dropdown-toggle " href="#" id="navbarDropdown" role="button"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        社團
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                        <a class="dropdown-item" href="#">FaceBook</a>
-                        <a class="dropdown-item" href="#">Youtube</a>
-
-                        <a class="dropdown-item" href="#">Instagram</a>
-                    </div>
-                </li>
+                    <a class="nav-link" href="#">New <span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Bestsellers<span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Living<span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Bedroom<span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Dinning<span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Office<span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Lighting<span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Outdoor<span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Kids<span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Accessories<span class="sr-only">(current)</span></a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Outlet<span class="sr-only">(current)</span></a>
+                  </li>
+                  
+                  
             </ul>
-            <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-            </form>
+            
+            <a href="" class="search"><i class="fas fa-search"></i></a>
+            
+            <a href=""><i class="fas fa-shopping-cart"></i></a>
+           
+            
+            
         </div>
     </nav>
+    <div class="announcement">
+        <p>WE ARE SHIPPING TO YOU WITH CONTACTLESS DELIVERY.</p>
+        <a href=""> LEARN MORE ></a>
+ 
+    </div>
+       
     <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
         <ol class="carousel-indicators">
             <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
