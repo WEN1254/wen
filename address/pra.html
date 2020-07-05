@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>讀取JSON</title>
     <script src="../Modules/MyHelper.js"></script>
 </head>
 <style>
@@ -13,7 +13,7 @@
         margin: 0;
         list-style: none;
     }
-    #d1{
+    #d1,h1{
         width: 100%;
         text-align: center;
         display: flex;
@@ -33,6 +33,7 @@
 </style>
 
 <body>
+    <h1>讀取JSON</h1>
     <div id="d1">
         <!-- <table>
           <tr>
@@ -73,12 +74,12 @@
                 });
 
 
-                 console.log(zipCode);
+                //  console.log(zipCode);
                 //  debugger;
                 var d1 = document.getElementById("d1");
                 var table = document.createElement("table");
                 table.setAttribute("class", "col-12");
-                table.borde
+                
                 for (let i = 0; i < Taiwan.length; i++) {
                     for (let j = 0; j < Taiwan[i].AreaList.length; j++) {
                         let div = document.createElement("div");
