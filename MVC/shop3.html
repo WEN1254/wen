@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <style>
+    *{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+    input{
+      display: none;
+    }
+    body{
+      position: relative;
+      overflow: hidden;
+      opacity:1;
+
+    }
+    .shop{
+      background-color: black;
+      position: absolute;
+      top: 0px;
+      right: -100px;
+      height: 1000px;
+      width: 100px;
+      transition: .2s;
+    }
+    input:checked~.shop{
+      right: 0px;
+      
+
+      /* display: flex; */
+    }
+    
+/* @keyframes click{
+  from{transform: translateX(-20px);}
+  to{transform: translateX(0px);}
+} */
+  </style>
+  <body class="body">
+    <input type="checkbox" id="check">
+    <button id="btn" for="check" onclick="shop()">按我
+
+    </button>
+    <div class="shop" id="shop">
+
+    </div>
+    <script>
+      var  count=true;
+ 
+    function shop(){
+      var check=document.getElementById("check");
+      
+      
+var value = check.checked;
+
+if(check.checked == true)
+{
+ 
+  check.checked = false;
+}
+else
+{
+ 
+  // body.style.opacity = ' ';
+  check.checked = true;
+}
+     
+
+    }
+
+
+//       function shop(){
+//         // alert(count++);
+//         if(count==true)
+//     {
+//       var myElement = document.querySelector("#shop");  // 取得ID為homeTitle的元素 
+//       count=false;
+// myElement.style.display = "flex";
+//     }
+//     else 
+//     {
+//       var myElement = document.querySelector("#shop");  // 取得ID為homeTitle的元素 
+// myElement.style.display = "none";
+// count=true;
+//     }
+     
+
+        // }
+        
+       
+
+
+      
+      
+        
+
+
+
+
+      
+    
+
+    </script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

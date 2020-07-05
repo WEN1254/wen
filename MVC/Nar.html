@@ -1,0 +1,515 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+</head>
+<style>
+    * {
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    .SIGN {
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 15px;
+    }
+
+    .SIGN a {
+        color: black;
+        text-decoration: none;
+    }
+
+    .SIGN a:hover {
+        color: gray;
+    }
+
+    .collapse a {
+        color: black;
+    }
+
+    .collapse .search {
+        padding: 0 30px;
+    }
+
+    .navbar {
+        position: sticky;
+        top: 0px;
+        z-index: 2;
+    }
+
+    input {
+        display: none;
+    }
+
+    .collapse {
+        position: relative;
+        /* overflow: hidden; */
+    }
+
+    .collapse #btn {
+        border: none;
+
+    }
+
+    .transparent {
+        position: fixed;
+        height: 1000px;
+        width: 1660px;
+        background-color: white;
+        opacity: 0.7;
+        top: 0px;
+        right: -1660px;
+    }
+
+    input:checked~.transparent {
+        right: 300px;
+    }
+
+
+
+
+    .shop {
+        background-color: white;
+        position: fixed;
+        top: 0px;
+        right: -300px;
+        height: 1000px;
+        width: 300px;
+        transition: .2s;
+    }
+
+    input:checked~.shop {
+        right: 0px;
+    }
+
+    /* 分隔 */
+    .announcement {
+        width: 100%;
+        position: sticky;
+        top: 70px;
+        z-index: 1;
+        background-color: rgb(24, 33, 71);
+        color: white;
+        text-align: center;
+    }
+
+    .announcement a {
+        color: white;
+    }
+
+    .product_name {
+        margin: 0 16px;
+        border-bottom: 1px solid #ddd;
+        text-align: center;
+    }
+
+    .product_name_home {
+        text-align: left;
+    }
+
+    .product_name_home a,
+    .product_name_home a:hover {
+        color: black;
+        text-decoration: none;
+    }
+
+    .product_name p {
+        font-size: 60px;
+    }
+
+    .storeby {
+        text-align: right;
+        padding: 10px 0;
+    }
+
+    .product_list {
+        display: flex;
+        padding: 0 16px;
+    }
+
+    .product_a {
+        color: black;
+    }
+
+    .product_a:hover {
+        color: black;
+        text-decoration: none;
+    }
+
+    .img {
+        text-align: center;
+    }
+
+    .card-img-top {
+        width: 90%;
+    }
+
+    .card {
+        border: 0px;
+    }
+
+    /*分隔*/
+    .navbar-brand img {
+        width: 40px;
+        height: 5ex;
+    }
+
+    .active {
+        color: #000;
+    }
+
+    .active a {
+        color: #000;
+        border-bottom: 1px solid transparent;
+        transition: .2s;
+    }
+
+    .active a:hover {
+        color: #87A0B2;
+        border-bottom: 1px solid#87A0B2;
+    }
+
+    .nav_icon {
+        font-size: 18px;
+    }
+
+    .nav_icon i {
+        margin: 10px;
+        color: #fff;
+        transition: .2s;
+    }
+
+    .nav_icon i:hover {
+        color: #87A0B2;
+    }
+
+    /*分隔*/
+    * {
+        font-family: "Helvetica", "Arial", "LiHei Pro", "黑體-繁", "微軟正黑體", sans-serif;
+    }
+
+    .modal-body {
+        width: 520px;
+        height: 600px;
+        border: 1px solid #666;
+        justify-content: center;
+        text-align: center;
+        vertical-align: middle;
+        background-image: url(https://walpa.tw/upload/save_image/11191700_5dd3a12367c5f.jpg);
+        background-size: cover;
+    }
+
+    i {
+        color: #000;
+    }
+
+    .account input {
+        font-size: 14px;
+        border: 1px solid#ccc;
+        border-radius: 3px;
+        background-color: rgba(246, 245, 245, 0.849);
+        display: flex;
+        flex-direction: column;
+        margin-top: 10px;
+        width: 258px;
+        height: 36px;
+    }
+
+
+
+    .modal-body img {
+        width: 75px;
+        height: 125px;
+    }
+
+    .modal-body .login {
+        border: none;
+        outline: none;
+        border-radius: 5px;
+        margin-top: 15px;
+        width: 258px;
+        font-size: 14px;
+        padding: 5px;
+        background-color: rgba(246, 245, 245, 0.849);
+    }
+
+    .other {
+        margin: 15px auto;
+        width: 258px;
+    }
+
+    .other i {
+        font-size: 50px;
+    }
+
+    .other .fa-facebook {
+        color: #3b5998;
+    }
+
+    .other .fa-google-plus {
+        color: #dd4b39;
+    }
+
+    .linear {
+        height: 60px;
+        line-height: 60px;
+        text-align: center;
+    }
+
+    .linear .line {
+        display: inline-block;
+        width: 30%;
+        border-top: 1px solid #666;
+    }
+
+    .linear .txt {
+        font-weight: 600;
+        color: #666;
+        vertical-align: middle;
+    }
+
+    .sign_up a {
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    #btn {
+        background: #343a40;
+    }
+
+
+
+ul.drop-down-menu ul { /*隱藏次選單*/
+        display: none;
+    }
+
+    ul.drop-down-menu li:hover > ul { /* 滑鼠滑入展開次選單*/
+        display: block;
+    }
+    .hidden{
+        position: fixed;
+        z-index: 2;
+        margin-top: 10px;
+        margin-left: 4px;
+        background-color: white;
+       
+    }
+    .hidden a{
+        color: white;
+    }
+    ul.drop-down-menu li {
+        
+        white-space: nowrap;
+        
+    }
+  
+ 
+
+    /* .hidden{
+        display: none;
+        background-color: ;
+    }
+    .new:hover>.hidden{
+        display: block;
+    } */
+
+    /*#Google{
+    background: red;
+}
+
+#Facebook {
+    background: blue;
+}*/
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <a class="navbar-brand col-1" href="~/Home/Index">
+            <img src="~/Assest/img/下載.png" alt="">
+        </a>
+
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="col-11 collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto  ml-auto col-9">
+                <li class="nav-item active">
+                    <a class="nav-link new" href="~/ProductList/Index">New <span class="sr-only">(current)</span></a>
+                   
+
+                </li>
+
+                <li class="nav-item active">
+                    <a class="nav-link" href="~/Bestsellers/Index">Bestsellers<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active dropdown drop-down-menu"></li>
+                    <ul class="drop-down-menu">
+                        <li>
+                            <a href="~/SofasIntroduction/Index" class="nav-link active">Sofas</a>
+                            <ul class="hidden">
+                                <li><a href="#">Living-Sofas And Sleeper</a>
+                                </li>
+                                <li><a href="#">Living-Sectional Sofas</a>
+                                </li>
+                                
+                            </ul>
+                        </li>
+                    </ul>
+                  </li>
+
+                  <li class="nav-item active dropdown drop-down-menu"></li>
+                  <ul class="drop-down-menu">
+                      <li>
+                          <a href="~/ChairsIntroduction/Index" class="nav-link active">Chairs</a>
+                          <ul class="hidden">
+                              <li><a href="#">Living-Lounge Chairs</a>
+                              </li>
+                              <li><a href="#">Living-Sectional Sofas</a>
+                              </li>
+                              <li><a href="#">Living-Ottomans And Stools</a>
+                              </li>
+                              <li><a href="#">Kids-Chairs</a>
+                              </li>
+                          </ul>
+                      </li>
+                  </ul>
+                </li>
+
+                <li class="nav-item active dropdown drop-down-menu"></li>
+                  <ul class="drop-down-menu">
+                      <li>
+                          <a href="~/ChairsIntroduction/Index" class="nav-link active">Tables</a>
+                          <ul class="hidden">
+                              <li><a href="#">Living-Accent And Coffee Tables</a>
+                              </li>
+                              <li><a href="#">Office-Desks And Tables</a>
+                              </li>
+                              <li><a href="#">Kids-Desk And Chairs</a>
+                              </li>
+                          </ul>
+                      </li>
+                  </ul>
+                </li>
+
+               
+                <li class="nav-item active dropdown drop-down-menu"></li>
+                  <ul class="drop-down-menu">
+                      <li>
+                          <a href="~/ChairsIntroduction/Index" class="nav-link active"> Beds</a>
+                          <ul class="hidden">
+                              <li><a href="#">Bedroom-Beds</a>
+                              </li>
+                              <li><a href="#">Kids-Beds</a>
+                              </li>
+                          </ul>
+                      </li>
+                  </ul>
+                </li>
+                
+                <li class="nav-item active dropdown drop-down-menu"></li>
+                <ul class="drop-down-menu">
+                    <li>
+                        <a href="~/ChairsIntroduction/Index"class="nav-link active"> Cabinet And Dressingtable</a>
+                        <ul class="hidden">
+                            <li><a href="#">Bedroom-Dressers</a>
+                            </li>
+                            <li><a href="#">Living-Bookcases</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+              </li>
+                
+               
+               
+                <li class="nav-item active">
+                    <a class="nav-link" href="~/Lighting/Index">Lighting<span class="sr-only">(current)</span></a>
+                </li>
+             
+                <li class="nav-item active dropdown drop-down-menu"></li>
+                <ul class="drop-down-menu">
+                    <li>
+                        <a href="~/ChairsIntroduction/Index"class="nav-link active"> Accessories</a>
+                        <ul class="hidden">
+                            <li><a href="#">Rugs</a>
+                            </li>
+                            <li><a href="#">Pillows And Cushionss</a>
+                            </li>
+                            <li><a href="#">Mirrors</a>
+                            </li>
+                            <li><a href="#">Bedding</a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+              </li>
+               
+                <li class="nav-item active">
+                    <a class="nav-link" href="~/Outlet/Index">Outlet<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="~/AboutUs/Index">About<span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+            <div class="nav_icon ">
+                <a href="" data-toggle="modal" data-target="#staticBackdrop"><i class="fas fa-user"></i></a>
+                <a href="" class="search"><i class="fas fa-search"></i></a>
+                <button id="btn" for="check" onclick="shop()">
+                    <i class="fas fa-shopping-cart"></i>
+                </button>
+                <input type="checkbox" id="check">
+
+
+
+                <div class="transparent">
+
+                </div>
+                <div class="shop" id="shop">
+
+                    <button id="close" type="button" class="close" aria-label="Close" onclick="shop()">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+        </div>
+    </nav>
+
+   
+   
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

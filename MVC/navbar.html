@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="/HTML/healtlyfood/fontawesome/fontawesome-free-5.12.1-web/css/all.css">
+    <link rel="stylesheet" href="註冊.css">
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</head>
+
+<style>
+    .navbar-brand img {
+        width: 40px;
+        height: 5ex;
+    }
+
+    .active {
+        color: #000;
+    }
+
+    .active a {
+        color: #000;
+        border-bottom: 1px solid transparent;
+        transition: .2s;
+    }
+
+    .active a:hover {
+        color: #87A0B2;
+        border-bottom: 1px solid#87A0B2;
+    }
+
+    .nav_icon {
+        font-size: 18px;
+    }
+
+    .nav_icon i {
+        margin: 10px;
+        color: #fff;
+        transition: .2s;
+    }
+
+    .nav_icon i:hover {
+        color: #87A0B2;
+    }
+</style>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark ">
+        <a class="navbar-brand col-1" href="~/MvcHome/Index">
+            <img src="下載.png" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div class="col-11 collapse navbar-collapse " id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto  ml-auto col-9">
+                <li class="nav-item active">
+                    <a class="nav-link" href="~/ProductList/Index">New <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="~/Bestsellers/Index">Bestsellers<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="~/LivingIntroduction/Index">Living<span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="~/BedroomIntroduction/Index">Bedroom<span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="~/DiningIntroduction/Index">Dinning<span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="~/OfficeIntroduction/Index">Office<span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="~/Lighting/Index">Lighting<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="~/Outdoor/Index">Outdoor<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="~/KidsIntroduction/Index">Kids<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="~/AccessoriesIntroduction/Index">Accessories<span
+                            class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="~/Outlet/Index">Outlet<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="~/AboutUs/Index">About<span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+            <div class="nav_icon ">
+                <a href="" data-toggle="modal" data-target="#staticBackdrop"><i class="fas fa-user"></i></a>
+                <a href="" class="search"><i class="fas fa-search"></i></a>
+                <a href=""><i class="fas fa-shopping-cart"></i></a>
+            </div>
+
+        </div>
+    </nav>
+
+    <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" role="dialog"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <img src="下載.png" alt="">
+                    <div class="account">
+                        <input class="mx-auto" type="text" placeholder="請輸入電子信箱">
+                        <input type="password" class="mx-auto" placeholder="請輸入8-14碼密碼">
+                        <input class="mx-auto" type="tel" placeholder="請輸入電話號碼">
+                    </div>
+                    <div class="name">
+                        <input class="mx-auto" type="text" placeholder="姓氏">
+                        <input class="mx-auto" type="text" placeholder="名">
+                    </div>
+                    <div class="date">
+                        <input class="mx-auto" type="date" placeholder="請選擇生日日期">
+                    </div>
+
+
+                    <button class=" login">註冊</button>
+                    <div class="linear">
+                        <span style="white-space:pre"></span><span class="line"></span>
+                        <span style="white-space:pre"></span><span class="txt">或</span>
+                        <span style="white-space:pre"></span> <span class="line"></span>
+                    </div>
+                    <div class="other">
+                        <i class="fab fa-facebook col-4"></i>
+                        <i class="col-4 fab fa-google-plus"></i>
+                    </div>
+                    <div class="sign_up">
+                        <p>沒有帳號嗎?<a href="">註冊</a></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

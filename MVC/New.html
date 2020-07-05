@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <style>
+      *{
+          padding: 0;
+          margin: 0;
+          list-style: none;
+      }
+      
+.product_name{
+    margin: 0 16px;
+    border-bottom: 1px solid #ddd;
+    text-align: center;
+}
+.product_name_home{
+    text-align: left;
+}
+.product_name_home a,.product_name_home a:hover{
+    color: black;
+    text-decoration: none;
+}
+.product_name p{ 
+    font-size: 60px;
+}
+/* 分隔 */
+ .storeby {
+    text-align: left;
+    padding: 10px 0;
+
+}
+/* 分隔 */
+.match{
+    background-color: white;
+    opacity: 0.6;
+    position: absolute;
+    z-index: 1;
+        top: 180px;
+        left: -300px;
+        height: 1500px;
+        width: 300px;
+        transition: .2s;
+}
+.match button{
+    margin-left: 13px;
+}
+input:checked~.match {
+        left: 0px;
+    }
+    button{
+        background-color: white;
+        border: 1px solid white;
+        color: black;
+        
+    }
+    button:focus{
+        outline:none;
+    }
+    #check_order{
+        display: none;
+    }
+    
+
+/* 分隔 */
+.product_list {
+    display: flex;
+    padding: 0 16px;
+}
+
+.product_a {
+    color: black;
+}
+
+.product_a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.img {
+    text-align: center;
+}
+
+.card-img-top {
+    width:90%;
+}
+
+.card {
+    border: 0px;
+}
+
+  </style>
+  <body>
+    <div class="product_name">
+        <div class="product_name_home">
+            <a href="#">Home</a>
+            <span>Bestselling Modern Furniture Designs</span>
+        </div>
+        <p><strong>New</strong></p>
+        <div class="storeby">
+
+            <input type="checkbox" id="check_order">
+            <span><button for="check_order" onclick="match()">SORT BY BEST MATCH</button></span>
+            <div class="match">
+                <button>BESTSELLERS</button>
+                <br>
+                <button>NEW</button>
+                <br>
+                <button>PRICE LOW TO HIGH</button>
+                <br>
+                <button>PRICE HIGH TO LOW</button>
+            </div>
+            
+        </div>
+    
+    </div>
+    
+    <div class="product_list">
+        <div class="col-6 col-md-4 col-xl-3">
+            <a href="~/ProductInformation/Index" class="product_a">
+    
+                <div class="card">
+                    <div class="img">
+                        <img src="https://res-1.cloudinary.com/dwpujv6in/image/upload/c_pad,dpr_2.0,f_auto,h_322,q_auto,w_322/v1/media/catalog/product/m/a/ma1_outlng_tb_frontlow1.jpg"
+                             alt="圖片說明" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <strong>
+                            <p class="card-title">Mate Outdoor Lounge Chair</p>
+                        </strong>
+                        <p class="card-text">$999.00</p>
+                        <p>Available in 3 finishes</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-6 col-md-4 col-xl-3">
+            <a href="#" class="product_a">
+                <div class="card">
+                    <div class="img">
+                        <img src="https://res-5.cloudinary.com/dwpujv6in/image/upload/c_pad,dpr_2.0,f_auto,h_322,q_auto,w_322/v1/media/catalog/product/b/p/bp1_sconce_mu_left1_1.jpg"
+                             alt="圖片說明" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <strong>
+                            <p class="card-title">Mate Outdoor Lounge Chair</p>
+                        </strong>
+                        <p class="card-text">$999.00</p>
+                        <p>Available in 3 finishes</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-6 col-md-4 col-xl-3">
+            <a href="#" class="product_a">
+                <div class="card">
+                    <div class="img">
+                        <img src="https://res-3.cloudinary.com/dwpujv6in/image/upload/c_pad,dpr_2.0,f_auto,h_322,q_auto,w_322/v1/media/catalog/product/n/e/ne1_settee_in_frontlow_1.jpg"
+                             alt="圖片說明" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <strong>
+                            <p class="card-title">Mate Outdoor Lounge Chair</p>
+                        </strong>
+                        <p class="card-text">$999.00</p>
+                        <p>Available in 3 finishes</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-6 col-md-4 col-xl-3">
+            <a href="#" class="product_a">
+                <div class="card">
+                    <div class="img">
+                        <img src="https://res-4.cloudinary.com/dwpujv6in/image/upload/c_pad,dpr_2.0,f_auto,h_322,q_auto,w_322/v1/media/catalog/product/m/m/mm1_stoolx_bc_frontlowwithpad_1.jpg"
+                             alt="圖片說明" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <strong>
+                            <p class="card-title">Mate Outdoor Lounge Chair</p>
+                        </strong>
+                        <p class="card-text">$999.00</p>
+                        <p>Available in 3 finishes</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+    </div>
+    <div class="product_list">
+        <div class="col-6 col-md-4 col-xl-3">
+            <a href="#" class="product_a">
+                <div class="card">
+                    <div class="img">
+                        <img src="https://res-2.cloudinary.com/dwpujv6in/image/upload/c_pad,dpr_2.0,f_auto,h_322,q_auto,w_322/v1/media/catalog/product/b/u/bu1_chndlr_ol.jpg"
+                             alt="圖片說明" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <strong>
+                            <p class="card-title">Mate Outdoor Lounge Chair</p>
+                        </strong>
+                        <p class="card-text">$999.00</p>
+                        <p>Available in 3 finishes</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-6 col-md-4 col-xl-3">
+            <a href="#" class="product_a">
+                <div class="card">
+                    <div class="img">
+                        <img src="https://res-3.cloudinary.com/dwpujv6in/image/upload/c_pad,dpr_2.0,f_auto,h_322,q_auto,w_322/v1/media/catalog/product/p/x/px1_smplnt_pt_frontlow.jpg"
+                             alt="圖片說明" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <strong>
+                            <p class="card-title">Mate Outdoor Lounge Chair</p>
+                        </strong>
+                        <p class="card-text">$999.00</p>
+                        <p>Available in 3 finishes</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-6 col-md-4 col-xl-3">
+            <a href="#" class="product_a">
+                <div class="card">
+                    <div class="img">
+                        <img src="https://res-1.cloudinary.com/dwpujv6in/image/upload/c_pad,dpr_2.0,f_auto,h_322,q_auto,w_322/v1/media/catalog/product/s/m/sm1_firept_fronthigh.jpg"
+                             alt="圖片說明" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <strong>
+                            <p class="card-title">Mate Outdoor Lounge Chair</p>
+                        </strong>
+                        <p class="card-text">$999.00</p>
+                        <p>Available in 3 finishes</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-6 col-md-4 col-xl-3">
+            <a href="#" class="product_a">
+                <div class="card">
+                    <div class="img">
+                        <img src="https://res-4.cloudinary.com/dwpujv6in/image/upload/c_pad,dpr_2.0,f_auto,h_322,q_auto,w_322/v1/media/catalog/product/m/a/ma1_oddncr_ln_frontlow1_1.jpg"
+                             alt="圖片說明" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <strong>
+                            <p class="card-title">Mate Outdoor Lounge Chair</p>
+                        </strong>
+                        <p class="card-text">$999.00</p>
+                        <p>Available in 3 finishes</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+    </div>
+    <div class="product_list">
+        <div class="col-6 col-md-4 col-xl-3">
+            <a href="#" class="product_a">
+                <div class="card">
+                    <div class="img">
+                        <img src="https://res-1.cloudinary.com/dwpujv6in/image/upload/c_pad,dpr_2.0,f_auto,h_322,q_auto,w_322/v1/media/catalog/product/m/a/ma1_outlng_tb_frontlow1.jpg"
+                             alt="圖片說明" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <strong>
+                            <p class="card-title">Mate Outdoor Lounge Chair</p>
+                        </strong>
+                        <p class="card-text">$999.00</p>
+                        <p>Available in 3 finishes</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-6 col-md-4 col-xl-3">
+            <a href="#" class="product_a">
+                <div class="card">
+                    <div class="img">
+                        <img src="https://res-5.cloudinary.com/dwpujv6in/image/upload/c_pad,dpr_2.0,f_auto,h_322,q_auto,w_322/v1/media/catalog/product/b/p/bp1_sconce_mu_left1_1.jpg"
+                             alt="圖片說明" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <strong>
+                            <p class="card-title">Mate Outdoor Lounge Chair</p>
+                        </strong>
+                        <p class="card-text">$999.00</p>
+                        <p>Available in 3 finishes</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-6 col-md-4 col-xl-3">
+            <a href="#" class="product_a">
+                <div class="card">
+                    <div class="img">
+                        <img src="https://res-3.cloudinary.com/dwpujv6in/image/upload/c_pad,dpr_2.0,f_auto,h_322,q_auto,w_322/v1/media/catalog/product/n/e/ne1_settee_in_frontlow_1.jpg"
+                             alt="圖片說明" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <strong>
+                            <p class="card-title">Mate Outdoor Lounge Chair</p>
+                        </strong>
+                        <p class="card-text">$999.00</p>
+                        <p>Available in 3 finishes</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-6 col-md-4 col-xl-3">
+            <a href="#" class="product_a">
+                <div class="card">
+                    <div class="img">
+                        <img src="https://res-4.cloudinary.com/dwpujv6in/image/upload/c_pad,dpr_2.0,f_auto,h_322,q_auto,w_322/v1/media/catalog/product/m/m/mm1_stoolx_bc_frontlowwithpad_1.jpg"
+                             alt="圖片說明" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <strong>
+                            <p class="card-title">Mate Outdoor Lounge Chair</p>
+                        </strong>
+                        <p class="card-text">$999.00</p>
+                        <p>Available in 3 finishes</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+    </div>
+    <div class="product_list">
+        <div class="col-6 col-md-4 col-xl-3">
+            <a href="#" class="product_a">
+                <div class="card">
+                    <div class="img">
+                        <img src="https://res-1.cloudinary.com/dwpujv6in/image/upload/c_pad,dpr_2.0,f_auto,h_322,q_auto,w_322/v1/media/catalog/product/m/a/ma1_outlng_tb_frontlow1.jpg"
+                             alt="圖片說明" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <strong>
+                            <p class="card-title">Mate Outdoor Lounge Chair</p>
+                        </strong>
+                        <p class="card-text">$999.00</p>
+                        <p>Available in 3 finishes</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-6 col-md-4 col-xl-3">
+            <a href="#" class="product_a">
+                <div class="card">
+                    <div class="img">
+                        <img src="https://res-5.cloudinary.com/dwpujv6in/image/upload/c_pad,dpr_2.0,f_auto,h_322,q_auto,w_322/v1/media/catalog/product/b/p/bp1_sconce_mu_left1_1.jpg"
+                             alt="圖片說明" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <strong>
+                            <p class="card-title">Mate Outdoor Lounge Chair</p>
+                        </strong>
+                        <p class="card-text">$999.00</p>
+                        <p>Available in 3 finishes</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-6 col-md-4 col-xl-3">
+            <a href="#" class="product_a">
+                <div class="card">
+                    <div class="img">
+                        <img src="https://res-3.cloudinary.com/dwpujv6in/image/upload/c_pad,dpr_2.0,f_auto,h_322,q_auto,w_322/v1/media/catalog/product/n/e/ne1_settee_in_frontlow_1.jpg"
+                             alt="圖片說明" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <strong>
+                            <p class="card-title">Mate Outdoor Lounge Chair</p>
+                        </strong>
+                        <p class="card-text">$999.00</p>
+                        <p>Available in 3 finishes</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-6 col-md-4 col-xl-3">
+            <a href="#" class="product_a">
+                <div class="card">
+                    <div class="img">
+                        <img src="https://res-4.cloudinary.com/dwpujv6in/image/upload/c_pad,dpr_2.0,f_auto,h_322,q_auto,w_322/v1/media/catalog/product/m/m/mm1_stoolx_bc_frontlowwithpad_1.jpg"
+                             alt="圖片說明" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <strong>
+                            <p class="card-title">Mate Outdoor Lounge Chair</p>
+                        </strong>
+                        <p class="card-text">$999.00</p>
+                        <p>Available in 3 finishes</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+    </div>
+    <div class="product_list">
+        <div class="col-6 col-md-4 col-xl-3">
+            <a href="#" class="product_a">
+                <div class="card">
+                    <div class="img">
+                        <img src="https://res-1.cloudinary.com/dwpujv6in/image/upload/c_pad,dpr_2.0,f_auto,h_322,q_auto,w_322/v1/media/catalog/product/m/a/ma1_outlng_tb_frontlow1.jpg"
+                             alt="圖片說明" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <strong>
+                            <p class="card-title">Mate Outdoor Lounge Chair</p>
+                        </strong>
+                        <p class="card-text">$999.00</p>
+                        <p>Available in 3 finishes</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-6 col-md-4 col-xl-3">
+            <a href="#" class="product_a">
+                <div class="card">
+                    <div class="img">
+                        <img src="https://res-5.cloudinary.com/dwpujv6in/image/upload/c_pad,dpr_2.0,f_auto,h_322,q_auto,w_322/v1/media/catalog/product/b/p/bp1_sconce_mu_left1_1.jpg"
+                             alt="圖片說明" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <strong>
+                            <p class="card-title">Mate Outdoor Lounge Chair</p>
+                        </strong>
+                        <p class="card-text">$999.00</p>
+                        <p>Available in 3 finishes</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-6 col-md-4 col-xl-3">
+            <a href="#" class="product_a">
+                <div class="card">
+                    <div class="img">
+                        <img src="https://res-3.cloudinary.com/dwpujv6in/image/upload/c_pad,dpr_2.0,f_auto,h_322,q_auto,w_322/v1/media/catalog/product/n/e/ne1_settee_in_frontlow_1.jpg"
+                             alt="圖片說明" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <strong>
+                            <p class="card-title">Mate Outdoor Lounge Chair</p>
+                        </strong>
+                        <p class="card-text">$999.00</p>
+                        <p>Available in 3 finishes</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-6 col-md-4 col-xl-3">
+            <a href="#" class="product_a">
+                <div class="card">
+                    <div class="img">
+                        <img src="https://res-4.cloudinary.com/dwpujv6in/image/upload/c_pad,dpr_2.0,f_auto,h_322,q_auto,w_322/v1/media/catalog/product/m/m/mm1_stoolx_bc_frontlowwithpad_1.jpg"
+                             alt="圖片說明" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <strong>
+                            <p class="card-title">Mate Outdoor Lounge Chair</p>
+                        </strong>
+                        <p class="card-text">$999.00</p>
+                        <p>Available in 3 finishes</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+    </div>
+    <div class="product_list">
+        <div class="col-6 col-md-4 col-xl-3">
+            <a href="#" class="product_a">
+                <div class="card">
+                    <div class="img">
+                        <img src="https://res-1.cloudinary.com/dwpujv6in/image/upload/c_pad,dpr_2.0,f_auto,h_322,q_auto,w_322/v1/media/catalog/product/m/a/ma1_outlng_tb_frontlow1.jpg"
+                             alt="圖片說明" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <strong>
+                            <p class="card-title">Mate Outdoor Lounge Chair</p>
+                        </strong>
+                        <p class="card-text">$999.00</p>
+                        <p>Available in 3 finishes</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-6 col-md-4 col-xl-3">
+            <a href="#" class="product_a">
+                <div class="card">
+                    <div class="img">
+                        <img src="https://res-5.cloudinary.com/dwpujv6in/image/upload/c_pad,dpr_2.0,f_auto,h_322,q_auto,w_322/v1/media/catalog/product/b/p/bp1_sconce_mu_left1_1.jpg"
+                             alt="圖片說明" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <strong>
+                            <p class="card-title">Mate Outdoor Lounge Chair</p>
+                        </strong>
+                        <p class="card-text">$999.00</p>
+                        <p>Available in 3 finishes</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-6 col-md-4 col-xl-3">
+            <a href="#" class="product_a">
+                <div class="card">
+                    <div class="img">
+                        <img src="https://res-3.cloudinary.com/dwpujv6in/image/upload/c_pad,dpr_2.0,f_auto,h_322,q_auto,w_322/v1/media/catalog/product/n/e/ne1_settee_in_frontlow_1.jpg"
+                             alt="圖片說明" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <strong>
+                            <p class="card-title">Mate Outdoor Lounge Chair</p>
+                        </strong>
+                        <p class="card-text">$999.00</p>
+                        <p>Available in 3 finishes</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="col-6 col-md-4 col-xl-3">
+            <a href="#" class="product_a">
+                <div class="card">
+                    <div class="img">
+                        <img src="https://res-4.cloudinary.com/dwpujv6in/image/upload/c_pad,dpr_2.0,f_auto,h_322,q_auto,w_322/v1/media/catalog/product/m/m/mm1_stoolx_bc_frontlowwithpad_1.jpg"
+                             alt="圖片說明" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <strong>
+                            <p class="card-title">Mate Outdoor Lounge Chair</p>
+                        </strong>
+                        <p class="card-text">$999.00</p>
+                        <p>Available in 3 finishes</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    
+    </div>
+    <div class="product_list">
+        <div class="col-6 col-md-4 col-xl-3">
+            <a href="#" class="product_a">
+                <div class="card">
+                    <div class="img">
+                        <img src="https://res-1.cloudinary.com/dwpujv6in/image/upload/c_pad,dpr_2.0,f_auto,h_322,q_auto,w_322/v1/media/catalog/product/m/a/ma1_outlng_tb_frontlow1.jpg"
+                             alt="圖片說明" class="card-img-top">
+                    </div>
+                    <div class="card-body">
+                        <strong>
+                            <p class="card-title">Mate Outdoor Lounge Chair</p>
+                        </strong>
+                        <p class="card-text">$999.00</p>
+                        <p>Available in 3 finishes</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <script>
+    function match() {
+        var check = document.getElementById("check_order");
+     
+     
+
+        var value = check.checked;
+
+        if (check.checked == true) {
+            
+            check.checked = false;
+        }
+        else {
+           
+            
+            check.checked = true;
+        }
+    }
+
+</script>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>

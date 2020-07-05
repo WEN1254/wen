@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+  </head>
+  <style>
+      *{
+          padding: 0;
+          margin: 0;
+          list-style: none;
+      }
+      .SIGN {
+            display: flex;
+            justify-content: flex-end;
+            padding: 0 15px;
+        }
+        .SIGN a {
+            color: black;
+            text-decoration: none;
+        }
+        .SIGN a:hover {
+            color: gray;
+        }
+        .collapse a {
+            color: black;
+        }
+        .collapse .search {
+            padding: 0 30px;
+        }
+        .navbar {
+            position: sticky;
+            top: 0px;
+            z-index: 2;
+        }
+        /* 分隔 */
+        .announcement {
+            width: 100%;
+            position: sticky;
+            top: 70px;
+            z-index: 1;
+            background-color: #3e4f53;
+            color: white;
+            text-align: center;
+        }
+        .announcement a {
+            color: white;
+        }
+
+        img {
+            object-fit: cover;
+        }
+        .color_btn {
+            display: flex;
+        }
+        a div:nth-child(0) {
+            background-color: rgb(64, 64, 64);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin: 5px;
+        }
+        a div:nth-child(1) {
+            background-color: rgb(51, 51, 51);
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            margin: 5px;
+        }
+        .product{
+            padding-top: 50px;
+        }
+        .buy {
+            text-align: left;
+        }
+        .buynumber {
+            background-color: #aaa;
+            margin-top: 20px;
+            color: white;
+            border: none;
+            text-align: center;
+            height: 50px;
+            padding-right: 20px;
+            
+        }
+        .buybutton {
+            background-color: black;
+            border: none;
+            color: white;
+            margin-top: 20px;
+            text-align: center;
+        }
+        .row {
+            justify-content: space-around;
+        }
+        .wrapper {
+            height: 500px;
+            background-color: #f4f4f0;
+        }
+        .wrapper h2 {
+            padding: 76px;
+            text-align: center;
+        }
+        .wrapper p {
+            width: 665px;
+            margin: auto;
+        }
+        .demo_picture {
+            padding-left: 0px;
+            padding-right: 0px;
+        }
+        .product_dimensions h2 {
+            display: block;
+            text-align: center;
+            padding: 50px;
+        }
+        .product_details {
+            background-color: #f4f4f0;
+        }
+        .product_details_title {
+            padding-top: 30px;
+            text-align: center;
+        }
+        .materials {
+            width: 100%;
+            text-align: left;
+            margin: auto;
+            padding-top: 50px;
+            padding-left: 27%;
+            padding-bottom: 50px;
+        }
+        .product_details_a {
+            text-align: center;
+            padding-bottom: 50px;
+        }
+        .interest_you {
+            border-top: 2px solid #aaa;
+            border-bottom: 2px solid #aaa;
+        }
+        .interest_you_title {
+            text-align: center;
+            padding-top: 20px;
+        }
+        .interest_you_card p {
+            text-align: center;
+        }
+        .shopping_notice_card{
+            border-top: 2px solid #aaa;
+            text-align: left;
+        }
+        .shipping{
+            padding: 100px 100px;
+        }
+        .shipping h3{
+            padding-bottom: 30px;
+        }
+        .return{
+            padding: 100px 100px;
+        }
+        .return h3{
+            padding-bottom: 30px;
+        }
+  </style>
+  <body>
+    <div class="container">
+        <div class="row">
+            <div class="product_picture col-7">
+                <img src="https://res-5.cloudinary.com/dwpujv6in/image/upload/c_pad,dpr_2.0,f_auto,h_930,q_auto,w_930/v1/media/catalog/product/s/w/swish-modern-console-desk-walnut-white-open-front_2.jpg"
+                     alt="" class="w-100">
+            </div>
+            <div class="product col-5">
+                <h2 class="pt-5">Swish Console Desk</h2>
+                <h3>$799.00</h3>
+                <p>MATERIAL</p>
+                <p>Walnut</p>
+                <div class="color_btn pt-0">
+                    <a href="">
+                        <div></div>
+                    </a>
+                    <a href="">
+                        <div></div>
+                    </a>
+                </div>
+                <p>LEG COLOR</p>
+                <p>Matte White</p>
+                <div class="color_btn">
+                    <a href="">
+                        <div></div>
+                    </a>
+                    <a href="">
+                        <div></div>
+                    </a>
+                </div>
+                <div class="row buy">
+                    <input class="buynumber col-2" type="text" value="1">
+                    <input class="buybutton col-5" type="button" value="ADD TO CART">
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="information_block container">
+        <div class="row">
+            <div class="col-2 align-content-center">
+                DESCRIPTION
+            </div>
+            <div class="col-2 align-content-center">
+                DIMENSIONS
+            </div>
+            <div class="col-2 align-content-center">
+                PRODUCT DETAILS
+            </div>
+            <div class="col-2 align-content-center">
+                SUGGESTED ITEMS
+            </div>
+            <div class="col-2 align-content-center">
+                SHIPPING & RETURNS
+            </div>
+        </div>
+    </div>
+    <div class="wrapper col-12">
+        <h2 class="align-content-center">Je ne sais quoi.</h2>
+        <p>
+            We don’t know exactly what it is, but it is whatever you need it to be. Sliding top to conceal or reveal more
+            work space. Pencil and/or junk drawer. Cord management slot. Modern desk, console, mini buffet, home office
+            headquarters. Voila!
+        </p>
+    </div>
+    <div class="demo_picture col-12">
+        <img src="https://www.bludot.com/media/wysiwyg/pdp/hero-images/QQQ_SwishWalnut-Entryway_v2.jpg" alt=""
+             class="w-100">
+    </div>
+    <div class="product_dimensions">
+        <h2>Product Dimensions</h2>
+        <img src="https://www.bludot.com/media/catalog/product/PDP/Dimensions/Swish-Console-Desk.2x.jpg" alt=""
+             class="w-100">
+    </div>
+    <div class="product_details">
+        <div class="product_details_title w-100">
+            <h2>Product Details</h2>
+        </div>
+        <div class="materials">
+            <ul>
+                <li>Powder-coated steel base</li>
+                <li>Whitewashed ash or walnut veneer top</li>
+                <li>Assembly required</li>
+            </ul>
+        </div>
+        <div class="row product_details_a">
+            <div class="col-4 ">
+                PRINT PRODUCT INFO
+            </div>
+            <div class="col-4 ">
+                ASSEMBLY + CARE
+            </div>
+            <div class="col-4 r">
+                DOWNLOAD FILES
+            </div>
+        </div>
+    </div>
+    <div class="interest_you">
+        <div class="interest_you_title w-100">
+            <h2>This Might Interest You</h2>
+        </div>
+        <div class="row interest_you_card">
+            <div class="col-4">
+                <img src="https://res-4.cloudinary.com/dwpujv6in/image/upload/c_pad,dpr_2.0,f_auto,h_405,q_auto,w_405/v1/media/catalog/product/c/t/ct1_deskwl_pg_3_4_cant-desk-walnut-grey_11_1.jpg"
+                     alt="" class="w-100">
+                <p>CANT DESK</p>
+                <P>$799.00</P>
+            </div>
+            <div class="col-4">
+                <img src="https://res-1.cloudinary.com/dwpujv6in/image/upload/c_pad,dpr_2.0,f_auto,h_405,q_auto,w_405/v1/media/catalog/product/m/i/minimalista-console-table-black-black-mirror-front_1.jpg"
+                     alt="" class="w-100">
+                <p>MINIMALISTA CONSOLE TABLE/p>
+                <P>$549.00 - $699.00</P>
+            </div>
+            <div class="col-4">
+                <img src="https://res-3.cloudinary.com/dwpujv6in/image/upload/c_pad,dpr_2.0,f_auto,h_405,q_auto,w_405/v1/media/catalog/product/s/r/sr1_medtbl_sk_swept-medium-dining-table-smoke-on-ash_2.jpg"
+                     alt="" class="w-100">
+                <p>STRUT MEDIUM WOOD TABLE</p>
+                <P>$1.199.00 - $1.299.00</P>
+            </div>
+        </div>
+        <div class="shopping_notice">
+            <div class="row shopping_notice_card">
+                <div class="shipping col-6">
+                    <h3>Shipping</h3>
+                    <p>Standard Shipping rates are 7% of your merchandise total.</p>
+                    <p>
+                        Large items are shipped via common carrier (a freight company). You will be contacted one to two
+                        days in advance to schedule a Monday through Friday delivery appointment.
+                    </p>
+                    <p>Please note, delivery drivers do not walk dogs, cook meals or take off their shirts.</p>
+                </div>
+                <div class="return col-6">
+                    <h3>Returns</h3>
+                    <p>
+                        Thrilled. Delighted. Satisfied. This is how we want you to feel about your Blu Dot purchase. If
+                        you aren't happy with your purchase, notify us within 10 days of receipt, and we will take it
+                        back for a full refund or help you find a suitable replacement.
+                    </p>
+                    <p>
+                        If something arrives damaged or defective, let us know and we will make arrangements for a
+                        replacement or refund if necessary.
+                    </p>
+                    <p>
+                        Please note that original delivery fees are non-refundable and additional shipping fees may
+                        apply.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  </body>
+</html>
